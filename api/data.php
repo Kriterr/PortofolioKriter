@@ -1,28 +1,28 @@
 <?php
-// Informasi Pribadi
-$name = "Nama Anda";
-$email = "emailanda@example.com";
-$github = "https://github.com/akun-github-anda";
-$linkedin = "https://linkedin.com/in/akun-linkedin-anda";
-$photo = "https://via.placeholder.com/150"; // Ganti dengan URL foto Anda
-$about = "Saya adalah seorang [pekerjaan Anda, cth: Developer Web Junior] dengan semangat tinggi untuk menciptakan solusi digital yang efisien dan menarik. Saya memiliki pengalaman dalam [sebutkan teknologi, cth: PHP, JavaScript, dan CSS] dan berfokus pada [bidang spesialisasi, cth: pengembangan antarmuka pengguna yang responsif].";
+$siteTitle = "Portfolio Saya";
+$heroTitle = "Halo, Saya Seorang Web Developer";
+$heroSubtitle = "Membangun website modern & simpel untuk kebutuhan Anda.";
+$aboutMe = "Saya seorang developer yang fokus pada pembuatan website responsif, modern, dan fungsional. Berpengalaman dalam PHP, JavaScript, dan berbagai framework.";
 
-// Daftar Proyek
 $projects = [
-    [
-        'title' => 'Proyek Website E-commerce',
-        'description' => 'Website e-commerce sederhana yang dibangun dengan PHP dan MySQL. Fitur meliputi keranjang belanja dan sistem pembayaran.',
-        'link' => 'https://github.com/akun-github-anda/ecommerce-project'
-    ],
-    [
-        'title' => 'Aplikasi To-do List',
-        'description' => 'Aplikasi web interaktif untuk mengelola daftar tugas harian. Menggunakan JavaScript untuk fungsionalitas dan CSS untuk styling.',
-        'link' => 'https://github.com/akun-github-anda/todo-app'
-    ],
-    [
-        'title' => 'Blog Pribadi',
-        'description' => 'Platform blog sederhana untuk berbagi tulisan dan pengalaman. Dibangun dari nol menggunakan PHP.',
-        'link' => 'https://github.com/akun-github-anda/personal-blog'
-    ]
+  [
+    "title" => "Website Toko Online",
+    "description" => "Sistem e-commerce dengan PHP & MySQL.",
+    "image" => "https://source.unsplash.com/400x300/?ecommerce",
+    "link" => "#"
+  ],
+  [
+    "title" => "Landing Page Startup",
+    "description" => "Landing page responsif untuk startup teknologi.",
+    "image" => "https://source.unsplash.com/400x300/?startup",
+    "link" => "#"
+  ],
+  [
+    "title" => "Dashboard Admin",
+    "description" => "Dashboard modern dengan grafik interaktif.",
+    "image" => "https://source.unsplash.com/400x300/?dashboard",
+    "link" => "#"
+  ]
 ];
-?>
+
+$contactEmail = "email@contoh.com";
