@@ -34,5 +34,6 @@ $profile = [
             "years" => "2019 - 2021",
             "desc" => "Built landing pages and dashboards for SaaS products with React and PHP."
         ]
-    ]
+    ],
+    "background" => "https://source.unsplash.com/1600x900/?technology,dark" 
 ];
