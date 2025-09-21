@@ -1,9 +1,9 @@
 <?php
 $profile = [
     "name" => "John Doe",
-    "role" => "Web Developer",
+    "role" => "Full Stack Developer",
     "photo" => "https://source.unsplash.com/200x200/?portrait,developer",
-    "about" => "Saya seorang web developer dengan fokus pada desain modern, UI/UX, dan pengalaman pengguna yang simpel. Berpengalaman membangun website responsif, portofolio, hingga aplikasi kecil berbasis web.",
+    "about" => "Saya seorang developer dengan fokus pada aplikasi web modern, backend yang efisien, serta UI/UX yang nyaman digunakan. Suka belajar teknologi baru dan membangun solusi kreatif.",
 
     "contacts" => [
         "LinkedIn" => "https://linkedin.com/in/yourprofile",
@@ -13,34 +13,34 @@ $profile = [
 
     "projects" => [
         [
-            "title" => "Portfolio Website",
-            "desc"  => "Website portofolio pribadi untuk menampilkan karya & pengalaman.",
-            "img"   => "https://source.unsplash.com/400x250/?website,design"
+            "title" => "Dark Portfolio",
+            "desc"  => "Template portofolio dengan tema gelap minimalis.",
+            "img"   => "https://source.unsplash.com/400x250/?dark,website"
         ],
         [
-            "title" => "E-commerce UI",
-            "desc"  => "Desain antarmuka aplikasi belanja online modern.",
-            "img"   => "https://source.unsplash.com/400x250/?ecommerce,app"
+            "title" => "Blog Engine",
+            "desc"  => "Sistem blog dengan PHP + MySQL + UI dark mode.",
+            "img"   => "https://source.unsplash.com/400x250/?blog,code"
         ],
         [
-            "title" => "Dashboard App",
-            "desc"  => "Aplikasi dashboard data interaktif dengan chart & analytics.",
-            "img"   => "https://source.unsplash.com/400x250/?dashboard,data"
+            "title" => "Data Dashboard",
+            "desc"  => "Dashboard interaktif untuk visualisasi data.",
+            "img"   => "https://source.unsplash.com/400x250/?data,dashboard"
         ]
     ],
 
     "experience" => [
         [
-            "role" => "Front End Engineer",
-            "company" => "TechCorp",
-            "years" => "2021 - Present",
-            "desc" => "Membangun UI modern menggunakan React, Tailwind, dan integrasi API."
+            "role" => "Software Engineer",
+            "company" => "Tech Innovations",
+            "years" => "2021 - Sekarang",
+            "desc" => "Mengembangkan aplikasi web skala besar dengan PHP, Node.js, dan React."
         ],
         [
             "role" => "Web Developer",
-            "company" => "Startup Studio",
+            "company" => "Creative Studio",
             "years" => "2019 - 2021",
-            "desc" => "Mengerjakan landing page, dashboard, dan aplikasi sederhana berbasis PHP."
+            "desc" => "Membangun landing page, portfolio, dan aplikasi custom untuk klien."
         ]
     ]
 ];
