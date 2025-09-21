@@ -1,0 +1,33 @@
+<?php
+$profile = [
+    'name' => 'Kriter R. Portfolio',
+    'tagline' => 'Web Developer | Modern & Simple Portfolio',
+    'photo' => 'https://avatars.githubusercontent.com/u/1?v=4',
+    'about' => 'Saya seorang web developer yang berfokus pada desain minimalis dan teknologi modern. Portofolio ini adalah contoh sederhana hasil karya saya. Silakan cek proyek-proyek yang telah saya buat.',
+    'contacts' => [
+        'email' => 'kriter.portfolio@email.com',
+        'github' => 'https://github.com/Kriterr',
+        'linkedin' => 'https://linkedin.com/in/kriterr'
+    ]
+];
+
+$projects = [
+    [
+        'title' => 'Company Profile Website',
+        'desc'  => 'Website statis responsif untuk company profile dengan tampilan modern.',
+        'image' => 'https://source.unsplash.com/600x400/?business,website',
+        'link'  => 'https://companyprofile.vercel.app'
+    ],
+    [
+        'title' => 'ToDo List Web App',
+        'desc'  => 'Aplikasi web sederhana untuk daftar tugas harian, dibuat dengan PHP dan JS.',
+        'image' => 'https://source.unsplash.com/600x400/?todo,app',
+        'link'  => 'https://todolist.vercel.app'
+    ],
+    [
+        'title' => 'Landing Page Produk',
+        'desc'  => 'Landing page untuk mempromosikan produk digital dengan CTA menarik.',
+        'image' => 'https://source.unsplash.com/600x400/?landingpage,product',
+        'link'  => 'https://landingproduk.vercel.app'
+    ]
+];
