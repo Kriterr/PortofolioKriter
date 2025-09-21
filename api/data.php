@@ -1,39 +1,46 @@
 <?php
 $profile = [
     "name" => "John Doe",
-    "title" => "Front End Developer",
+    "role" => "Web Developer",
     "photo" => "https://source.unsplash.com/200x200/?portrait,developer",
-    "about" => "I’m a front-end developer passionate about building responsive, accessible, and modern web applications. I enjoy blending design with code to create seamless digital experiences.",
+    "about" => "Saya seorang web developer dengan fokus pada desain modern, UI/UX, dan pengalaman pengguna yang simpel. Berpengalaman membangun website responsif, portofolio, hingga aplikasi kecil berbasis web.",
+
     "contacts" => [
         "LinkedIn" => "https://linkedin.com/in/yourprofile",
         "GitHub"   => "https://github.com/yourprofile",
         "Email"    => "mailto:youremail@example.com"
     ],
+
     "projects" => [
         [
             "title" => "Portfolio Website",
-            "desc"  => "A personal portfolio website showcasing my work and skills.",
+            "desc"  => "Website portofolio pribadi untuk menampilkan karya & pengalaman.",
             "img"   => "https://source.unsplash.com/400x250/?website,design"
         ],
         [
-            "title" => "E-commerce App",
-            "desc"  => "A shopping platform with cart and checkout features.",
+            "title" => "E-commerce UI",
+            "desc"  => "Desain antarmuka aplikasi belanja online modern.",
             "img"   => "https://source.unsplash.com/400x250/?ecommerce,app"
+        ],
+        [
+            "title" => "Dashboard App",
+            "desc"  => "Aplikasi dashboard data interaktif dengan chart & analytics.",
+            "img"   => "https://source.unsplash.com/400x250/?dashboard,data"
         ]
     ],
+
     "experience" => [
         [
             "role" => "Front End Engineer",
-            "company" => "CreativeLabs",
+            "company" => "TechCorp",
             "years" => "2021 - Present",
-            "desc" => "Developing UI components and ensuring accessibility for enterprise-level applications."
+            "desc" => "Membangun UI modern menggunakan React, Tailwind, dan integrasi API."
         ],
         [
             "role" => "Web Developer",
             "company" => "Startup Studio",
             "years" => "2019 - 2021",
-            "desc" => "Built landing pages and dashboards for SaaS products with React and PHP."
+            "desc" => "Mengerjakan landing page, dashboard, dan aplikasi sederhana berbasis PHP."
         ]
-    ],
-    "background" => "https://source.unsplash.com/1600x900/?technology,dark" 
+    ]
 ];
