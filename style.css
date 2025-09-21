@@ -2,47 +2,60 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #f9fafb;
-  color: #333;
+  background: #0f172a; /* gelap */
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
   text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Wrapper Tengah */
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(30, 41, 59, 0.95);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
 }
 
 /* Hero */
 .hero {
-  padding: 3rem 1rem;
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  color: white;
+  margin-bottom: 2rem;
 }
 .hero img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 4px solid white;
+  object-fit: cover;
+  border: 4px solid #3b82f6;
   margin-bottom: 1rem;
 }
 .hero h1 {
   font-size: 2rem;
+  color: #fff;
 }
 .hero h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
-  color: #e0e7ff;
+  color: #9ca3af;
+  margin-top: 0.3rem;
 }
 
 /* Sections */
 .section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+  margin: 2.5rem 0;
 }
 .section h2 {
-  font-size: 1.8rem;
-  color: #3b82f6;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
+  color: #3b82f6;
 }
 .section p {
-  margin-bottom: 1rem;
+  color: #d1d5db;
 }
 
 /* Contacts */
@@ -50,27 +63,30 @@ body {
   margin-top: 1rem;
 }
 .contacts a {
-  margin: 0 0.8rem;
-  color: #3b82f6;
+  margin: 0 1rem;
+  color: #93c5fd;
   text-decoration: none;
   font-weight: 500;
 }
 .contacts a:hover {
-  color: #9333ea;
+  color: #fff;
 }
 
 /* Projects */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
 .card {
-  background: white;
+  background: #1e293b;
   border-radius: 10px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
 }
 .card img {
   width: 100%;
@@ -80,8 +96,11 @@ body {
   margin-bottom: 0.8rem;
 }
 .card h3 {
-  margin-bottom: 0.5rem;
-  color: #111;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+.card p {
+  color: #cbd5e1;
 }
 
 /* Experience */
@@ -89,25 +108,26 @@ body {
   margin-bottom: 2rem;
 }
 .exp h3 {
-  font-size: 1.2rem;
-  color: #111;
+  font-size: 1.1rem;
+  color: #fff;
 }
 .exp span {
   color: #3b82f6;
 }
 .exp small {
   display: block;
-  color: #666;
+  color: #9ca3af;
   margin-bottom: 0.4rem;
 }
 .exp p {
-  color: #444;
+  color: #d1d5db;
 }
 
 /* Footer */
 footer {
-  background: #f3f4f6;
-  padding: 1.5rem;
-  color: #555;
+  margin-top: 2rem;
+  padding-top: 1rem;
   font-size: 0.9rem;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
 }
