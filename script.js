@@ -1,4 +1,4 @@
-// Animasi sederhana saat scroll (fade in)
+// Animasi fade-in saat scroll
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section, .card, .exp");
   const observer = new IntersectionObserver(entries => {
