@@ -1,65 +1,41 @@
-<?php
-include 'data.php';
-?>
+<?php include 'data.php'; ?>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title><?php echo $profile['name']; ?> | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $siteTitle; ?></title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo"><?= $siteTitle; ?></h1>
-      <ul class="nav-links">
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <h1><?php echo $profile['name']; ?></h1>
+      <h2><?php echo $profile['title']; ?></h2>
+      <p class="tagline"><?php echo $profile['tagline']; ?></p>
 
-  <header class="hero">
-    <div class="container">
-      <h2><?= $heroTitle; ?></h2>
-      <p><?= $heroSubtitle; ?></p>
-    </div>
-  </header>
+      <nav>
+        <ul>
+          <?php foreach($profile['menu'] as $menu): ?>
+            <li><a href="#<?php echo strtolower($menu); ?>"><?php echo $menu; ?></a></li>
+          <?php endforeach; ?>
+        </ul>
+      </nav>
 
-  <main class="container">
-    <section id="about">
-      <h2>Tentang Saya</h2>
-      <p><?= $aboutMe; ?></p>
-    </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="grid">
-        <?php foreach ($projects as $project): ?>
-          <div class="card">
-            <img src="<?= $project['image']; ?>" alt="<?= $project['title']; ?>">
-            <h3><?= $project['title']; ?></h3>
-            <p><?= $project['description']; ?></p>
-            <a href="<?= $project['link']; ?>" target="_blank">Lihat Proyek</a>
-          </div>
+      <div class="socials">
+        <?php foreach($profile['socials'] as $key => $link): ?>
+          <a href="<?php echo $link; ?>" target="_blank"><?php echo ucfirst($key); ?></a>
         <?php endforeach; ?>
       </div>
-    </section>
+    </aside>
 
-    <section id="contact">
-      <h2>Kontak</h2>
-      <p>Email: <a href="mailto:<?= $contactEmail; ?>"><?= $contactEmail; ?></a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; <?= date('Y'); ?> <?= $siteTitle; ?>. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Main Content -->
+    <main class="content">
+      <?php foreach($profile['bio'] as $paragraph): ?>
+        <p><?php echo $paragraph; ?></p>
+      <?php endforeach; ?>
+    </main>
+  </div>
 </body>
 </html>
