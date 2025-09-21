@@ -2,23 +2,37 @@
 $profile = [
     "name" => "John Doe",
     "title" => "Front End Developer",
-    "tagline" => "I build clean, accessible, and responsive digital experiences.",
-    "bio" => [
-        "I’m passionate about crafting user-friendly interfaces that balance design with engineering. My focus is building products that are both beautiful and accessible.",
-        "Currently, I work at <strong>CreativeLabs</strong> as a Front-End Engineer. I contribute to building and maintaining scalable UI systems that power modern web applications.",
-        "In the past, I have collaborated with <em>agencies</em>, <em>start-ups</em>, and <em>product studios</em>, helping teams launch impactful products.",
-        "Outside of work, I enjoy hiking, photography, and exploring new JavaScript frameworks."
+    "photo" => "https://source.unsplash.com/200x200/?portrait,developer",
+    "about" => "I’m a front-end developer passionate about building responsive, accessible, and modern web applications. I enjoy blending design with code to create seamless digital experiences.",
+    "contacts" => [
+        "LinkedIn" => "https://linkedin.com/in/yourprofile",
+        "GitHub"   => "https://github.com/yourprofile",
+        "Email"    => "mailto:youremail@example.com"
     ],
-    "pictures" => [
-        "https://source.unsplash.com/400x300/?code",
-        "https://source.unsplash.com/400x300/?technology",
-        "https://source.unsplash.com/400x300/?developer"
+    "projects" => [
+        [
+            "title" => "Portfolio Website",
+            "desc"  => "A personal portfolio website showcasing my work and skills.",
+            "img"   => "https://source.unsplash.com/400x250/?website,design"
+        ],
+        [
+            "title" => "E-commerce App",
+            "desc"  => "A shopping platform with cart and checkout features.",
+            "img"   => "https://source.unsplash.com/400x250/?ecommerce,app"
+        ]
     ],
-    "menu" => ["About", "Experience", "Projects", "Contact"],
-    "socials" => [
-        "GitHub" => "#",
-        "LinkedIn" => "#",
-        "Twitter" => "#",
-        "Instagram" => "#"
+    "experience" => [
+        [
+            "role" => "Front End Engineer",
+            "company" => "CreativeLabs",
+            "years" => "2021 - Present",
+            "desc" => "Developing UI components and ensuring accessibility for enterprise-level applications."
+        ],
+        [
+            "role" => "Web Developer",
+            "company" => "Startup Studio",
+            "years" => "2019 - 2021",
+            "desc" => "Built landing pages and dashboards for SaaS products with React and PHP."
+        ]
     ]
 ];
