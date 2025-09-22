@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #00BFFF; /* Aksen biru cerah */
-    --text-color: #e0e6ed; /* Teks cerah */
-    --border-color: rgba(255, 255, 255, 0.2); /* Border transparan */
+    --primary-color: #00BFFF;
+    --text-color: #e0e6ed;
+    --border-color: #444; /* Solid border color */
+    --background-color: #0a111a;
 }
 
 * {
@@ -14,19 +15,13 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #0a111a;
-    /* Latar belakang statis bertema teknologi */
-    background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: var(--background-color);
     -webkit-font-smoothing: antialiased;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
     padding: 2rem 0;
-    position: relative;
     overflow-x: hidden;
 }
 
@@ -34,19 +29,15 @@ body {
 .main-container {
     max-width: 800px;
     width: 90%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(10, 17, 26, 0.4);
+    background-color: #1a2a3a; /* Solid background color */
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 2rem;
-    position: relative;
-    z-index: 1;
 }
 
 /* Sections */
 .section {
-    background-color: transparent;
+    background-color: #2c3e50; /* Solid background color */
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
@@ -139,7 +130,7 @@ h2 {
 }
 
 .skills-list li {
-    background-color: transparent;
+    background-color: #444; /* Solid background color */
     border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -148,7 +139,7 @@ h2 {
 }
 
 .skills-list li:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--primary-color);
 }
 
 /* Projects */
@@ -159,7 +150,7 @@ h2 {
 }
 
 .project-card {
-    background-color: transparent;
+    background-color: #2c3e50; /* Solid background color */
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
