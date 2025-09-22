@@ -1,9 +1,7 @@
 :root {
     --primary-color: #00BFFF; /* Aksen biru cerah */
-    --secondary-color: #1a2a3a; /* Biru tua untuk teks */
     --text-color: #e0e6ed; /* Teks cerah */
     --border-color: rgba(255, 255, 255, 0.2); /* Border transparan */
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -23,31 +21,41 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 2rem 0;
-    position: relative; /* Penting untuk posisi video */
-    z-index: 1; /* Konten di atas video */
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Video Background */
-#background-video {
-    position: fixed; /* Posisi tetap di layar */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Memastikan video menutupi seluruh layar */
-    z-index: -1; /* Menempatkan video di belakang konten */
-}
-
-/* Overlay gelap untuk meningkatkan kontras */
-body::before {
-    content: '';
+/* Animasi Latar Belakang */
+.background-animation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Warna overlay */
-    z-index: 0;
+    overflow: hidden;
+    z-index: -1;
+    background: #0a111a;
+}
+
+.background-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 191, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: move-background 60s linear infinite;
+}
+
+@keyframes move-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
 }
 
 /* Main Container (untuk memusatkan konten) */
@@ -59,16 +67,16 @@ body::before {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 2rem;
     position: relative;
-    z-index: 2; /* Memastikan konten container di atas overlay */
+    z-index: 1;
 }
 
 /* Sections */
 .section {
-    background-color: transparent; /* Transparan */
+    background-color: transparent;
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color); /* Hanya outline */
+    border: 1px solid var(--border-color);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -177,10 +185,10 @@ h2 {
 }
 
 .project-card {
-    background-color: transparent; /* Transparan */
+    background-color: transparent;
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color); /* Hanya outline */
+    border: 1px solid var(--border-color);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -220,4 +228,3 @@ h2 {
     font-size: 0.9rem;
     opacity: 0.6;
 }
-/*
