@@ -1,5 +1,4 @@
 <?php
-// Memuat data dari file data.php
 require_once 'data.php';
 ?>
 <!DOCTYPE html>
@@ -14,6 +13,7 @@ require_once 'data.php';
 <body>
     <header class="header">
         <div class="container">
+            <img src="<?php echo $profile['profile_pic']; ?>" alt="Foto <?php echo $profile['name']; ?>" class="profile-pic">
             <h1><?php echo $profile['name']; ?></h1>
             <p><?php echo $profile['job_title']; ?></p>
         </div>
@@ -24,10 +24,7 @@ require_once 'data.php';
             <div class="container">
                 <h2>Tentang Saya</h2>
                 <div class="profile-info">
-                    <img src="<?php echo $profile['profile_pic']; ?>" alt="Foto <?php echo $profile['name']; ?>" class="profile-pic">
-                    <div class="profile-text">
-                        <p><?php echo $profile['bio']; ?></p>
-                    </div>
+                    <p><?php echo $profile['bio']; ?></p>
                 </div>
             </div>
         </section>

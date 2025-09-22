@@ -1,11 +1,12 @@
 :root {
-    --primary-color: #007BFF;
-    --secondary-color: #34495e;
-    --background-color: #f8f9fa;
-    --text-color: #495057;
-    --card-bg-color: #ffffff;
-    --border-color: #e9ecef;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --primary-color: #00BFFF; /* Aksen biru cerah */
+    --secondary-color: #1a2a3a; /* Biru tua untuk teks dan card */
+    --background-color-start: #0f1c2b; /* Gradien awal */
+    --background-color-end: #1a2a3a; /* Gradien akhir */
+    --text-color: #e0e6ed; /* Teks cerah */
+    --card-bg-color: rgba(26, 42, 58, 0.7); /* Card transparan */
+    --border-color: #2c3e50;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -18,7 +19,8 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, var(--background-color-start), var(--background-color-end));
+    background-attachment: fixed;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -29,26 +31,35 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Header & Nav */
+/* Header & Profile Section (Gabungan) */
 .header {
-    background-color: var(--secondary-color);
-    color: #fff;
     text-align: center;
-    padding: 4rem 0 2rem;
-    position: relative;
-    overflow: hidden;
+    padding: 5rem 0 2rem;
+    color: #fff;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    margin-bottom: 1rem;
 }
 
 .header h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 300;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* Main Content */
@@ -58,16 +69,17 @@ body {
 
 .section {
     background-color: var(--card-bg-color);
+    backdrop-filter: blur(10px); /* Efek blur pada background card */
     padding: 2.5rem;
     margin-bottom: 2rem;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
-    border-top: 3px solid var(--primary-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section h2 {
     font-size: 1.8rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
@@ -75,63 +87,108 @@ body {
 
 /* About Section */
 .profile-info {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    text-align: center;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--primary-color);
-}
-
-.profile-text p {
+.profile-info p {
     font-size: 1rem;
     line-height: 1.8;
+    color: var(--text-color);
 }
 
-/* Skills & Technologies (Menggunakan Grid untuk kerapian) */
-.skills-grid {
+/* Skills & Projects */
+.skills-grid, .projects-grid {
     display: grid;
+    gap: 1.5rem;
+}
+
+.skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
 }
 
 .skill-item {
-    background-color: var(--background-color);
-    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
     border-left: 3px solid var(--primary-color);
+    padding: 1rem;
     border-radius: 4px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
     font-weight: 500;
 }
 
 .skill-item:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Projects Section (Tampilan card lebih minimalis) */
 .projects-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
 }
 
 .project-card {
-    background-color: var(--background-color);
+    background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     overflow: hidden;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .project-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 .project-content {
-    padding: 1.
+    padding: 1.25rem;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #0099e6;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f1c2b;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 0.75rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
