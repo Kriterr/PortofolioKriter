@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #4a90e2; /* Blue */
-    --secondary-color: #333; /* Dark Grey */
-    --background-color: #f0f2f5; /* Light Grey */
-    --card-bg-color: #ffffff;
-    --text-color: #555;
-    --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --primary-color: #00BFFF; /* Aksen biru cerah */
+    --secondary-color: #1a2a3a; /* Biru tua untuk card */
+    --text-color: #e0e6ed; /* Teks cerah */
+    --card-bg-color: rgba(26, 42, 58, 0.4); /* Card transparan */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -17,23 +17,49 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
-    scroll-behavior: smooth;
+    background-color: #0a111a; /* Background hitam gelap */
+    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png'), url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f'); /* Ganti dengan gambar tech */
+    background-size: auto, cover;
+    background-attachment: fixed;
+    background-position: center;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem 0;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 0 1.5rem;
+/* Main Container (untuk memusatkan konten) */
+.main-container {
+    max-width: 800px;
+    width: 90%;
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
 }
 
-/* Header & Profile */
-.header {
+/* Sections */
+.section {
     background-color: var(--card-bg-color);
-    box-shadow: var(--shadow);
-    padding: 3rem 0;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.section:hover {
+    background-color: rgba(26, 42, 58, 0.6);
+}
+
+/* Profile Section */
+.profile-section {
     text-align: center;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0;
 }
 
 .profile-pic {
@@ -42,43 +68,30 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
-    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+    box-shadow: 0 0 15px var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.header h1 {
-    font-size: 2.2rem;
+h1 {
+    font-size: 2.5rem;
     font-weight: 700;
-    color: var(--secondary-color);
-}
-
-.header p {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--text-color);
+    color: #fff;
     margin-top: 0.5rem;
 }
 
-/* Main Content */
-.main-content {
-    padding: 2.5rem 0;
+.job-title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.8;
 }
 
-.section {
-    background-color: var(--card-bg-color);
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.section h2 {
+/* Sub-headings */
+h2 {
     font-size: 1.8rem;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
-    display: inline-block;
 }
 
 /* About & Contact */
@@ -89,7 +102,7 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
@@ -98,7 +111,7 @@ body {
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .contact-item i {
@@ -115,42 +128,41 @@ body {
 }
 
 .skills-list li {
-    background-color: var(--background-color);
-    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary-color);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 400;
+    border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .skills-list li:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
 .project-card {
-    background-color: var(--background-color);
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
-    border-left: 4px solid var(--primary-color);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
     font-size: 1.3rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -169,18 +181,13 @@ body {
 }
 
 .project-link:hover {
-    color: var(--secondary-color);
-}
-
-.project-link i {
-    margin-left: 0.25rem;
+    color: #fff;
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 1.5rem 0;
-    background-color: var(--secondary-color);
-    color: #fff;
     font-size: 0.9rem;
+    opacity: 0.6;
 }
