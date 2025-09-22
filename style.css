@@ -8,7 +8,6 @@
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +17,6 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color-dark);
-    /* Latar belakang statis bertema teknologi */
     background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
     background-size: cover;
     background-position: center;
@@ -35,9 +33,8 @@ body {
 .main-container {
     max-width: 900px;
     width: 90%;
-    /* Efek glassmorphism di main-container */
-    background-color: rgba(10, 17, 26, 0.6); /* Semi-transparan untuk efek dasar */
-    backdrop-filter: blur(8px); /* Efek blur pada latar belakang di belakangnya */
+    background-color: rgba(10, 17, 26, 0.6);
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
@@ -46,12 +43,12 @@ body {
 
 /* Sections - Transparan dengan Outline */
 .section {
-    background-color: transparent; /* Transparan */
+    background-color: transparent;
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--outline-color); /* Hanya outline */
-    opacity: 0; /* Initial state for fade-in animation */
+    border: 1px solid var(--outline-color);
+    opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s;
 }
@@ -102,26 +99,24 @@ h2 {
 /* Profile Section - Gambar Bulat */
 .profile-header-content {
     text-align: center;
-    background-color: transparent; /* Pastikan transparan */
-    border: none; /* Hilangkan border */
+    background-color: transparent;
+    border: none;
     padding-bottom: 0;
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Membuat gambar bulat */
+    border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
     box-shadow: var(--profile-glow);
     margin-bottom: 1rem;
 }
 
-/* Contact Grid */
-.contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+/* Contact List - Atas ke Bawah */
+.contact-list-vertical {
+    display: block; /* Menjadikan elemen block untuk tumpukan vertikal */
 }
 
 .contact-item {
@@ -132,10 +127,16 @@ h2 {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
+    margin-bottom: 1rem; /* Jarak antar item */
 }
 
 .contact-item:hover {
     color: var(--primary-color);
+}
+
+.contact-icon {
+    display: inline-block;
+    width: 2rem; /* Lebar tetap untuk ikon */
 }
 
 .contact-item i {
@@ -152,8 +153,8 @@ h2 {
 }
 
 .skills-list li {
-    background-color: transparent; /* Transparan */
-    border: 1px solid var(--outline-color); /* Hanya outline */
+    background-color: transparent;
+    border: 1px solid var(--outline-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -162,7 +163,7 @@ h2 {
 }
 
 .skills-list li:hover {
-    background-color: rgba(0, 191, 255, 0.2); /* Sedikit warna saat hover */
+    background-color: rgba(0, 191, 255, 0.2);
 }
 
 /* Projects and Certificates - Transparan dengan Outline */
@@ -173,11 +174,11 @@ h2 {
 }
 
 .project-card, .certificate-item {
-    background-color: transparent; /* Transparan */
+    background-color: transparent;
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--outline-color); /* Hanya outline */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow tetap ada agar terlihat modern */
+    border: 1px solid var(--outline-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 

@@ -29,11 +29,11 @@ require_once 'data.php';
 
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <div class="contact-grid">
+            <div class="contact-list-vertical">
                 <?php foreach ($contact as $item) : ?>
                     <a href="<?php echo $item['link']; ?>" target="_blank" class="contact-item">
-                        <i class="<?php echo $item['icon']; ?>"></i>
-                        <span><?php echo $item['text']; ?></span>
+                        <div class="contact-icon"><i class="<?php echo $item['icon']; ?>"></i></div>
+                        <span class="contact-text"><?php echo $item['text']; ?></span>
                     </a>
                 <?php endforeach; ?>
             </div>

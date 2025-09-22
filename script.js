@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(fadeInOnScroll, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.2 // Trigger when 20% of the element is visible
+        threshold: 0.2
     });
 
     const sections = document.querySelectorAll('.section');
