@@ -63,3 +63,25 @@ $contact = [
         'link' => 'tel:+6281234567890'
     ]
 ];
+
+// List of certificates
+$certificates = [
+    [
+        'title' => 'AWS Certified Cloud Practitioner',
+        'issuer' => 'Amazon Web Services (AWS)',
+        'date' => 'Issued May 2024',
+        'link' => 'https://www.aws.org/credential/link' // Ganti dengan tautan kredensial Anda
+    ],
+    [
+        'title' => 'Google Project Management',
+        'issuer' => 'Coursera',
+        'date' => 'Issued March 2024',
+        'link' => 'https://www.coursera.org/credential/link'
+    ],
+    [
+        'title' => 'Certified ScrumMaster (CSM)',
+        'issuer' => 'Scrum Alliance',
+        'date' => 'Issued January 2024',
+        'link' => 'https://www.scrumalliance.org/credential/link'
+    ]
+];

@@ -1,10 +1,8 @@
 :root {
     --primary-color: #00BFFF; /* Aksen biru cerah */
-    --secondary-color: #1a2a3a; /* Biru tua untuk card */
     --text-color: #e0e6ed; /* Teks cerah */
-    --card-bg-color: rgba(26, 42, 58, 0.4); /* Card transparan */
-    --border-color: rgba(255, 255, 255, 0.1);
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --border-color: #444; /* Solid border color */
+    --background-color: #0a111a;
 }
 
 * {
@@ -17,24 +15,25 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #0a111a; /* Background hitam gelap */
-    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png'), url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f'); /* Ganti dengan gambar tech */
-    background-size: auto, cover;
-    background-attachment: fixed;
+    background-color: var(--background-color);
+    background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+    background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
     padding: 2rem 0;
+    overflow-x: hidden;
 }
 
 /* Main Container (untuk memusatkan konten) */
 .main-container {
     max-width: 800px;
     width: 90%;
-    backdrop-filter: blur(5px);
+    background-color: #1a2a3a; /* Solid background color */
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 2rem;
@@ -42,16 +41,17 @@ body {
 
 /* Sections */
 .section {
-    background-color: var(--card-bg-color);
+    background-color: #2c3e50; /* Solid background color */
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    transition: background-color 0.3s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .section:hover {
-    background-color: rgba(26, 42, 58, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
 }
 
 /* Profile Section */
@@ -103,7 +103,7 @@ h2 {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .contact-item {
@@ -112,6 +112,12 @@ h2 {
     gap: 1rem;
     font-size: 1rem;
     color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item:hover {
+    color: var(--primary-color);
 }
 
 .contact-item i {
@@ -128,8 +134,8 @@ h2 {
 }
 
 .skills-list li {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-left: 3px solid var(--primary-color);
+    background-color: #444; /* Solid background color */
+    border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -137,7 +143,7 @@ h2 {
 }
 
 .skills-list li:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--primary-color);
 }
 
 /* Projects */
@@ -148,16 +154,16 @@ h2 {
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #2c3e50; /* Solid background color */
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
 }
 
 .project-card h3 {
@@ -183,6 +189,54 @@ h2 {
 .project-link:hover {
     color: #fff;
 }
+
+/* Certificates */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.certificate-item {
+    background-color: #444;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+}
+
+.certificate-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.certificate-item .issuer, .certificate-item .date {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.certificate-item .date {
+    margin-bottom: 1rem;
+}
+
+.certificate-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.certificate-link:hover {
+    color: #fff;
+}
+
 
 /* Footer */
 .footer {
