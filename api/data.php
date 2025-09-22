@@ -1,52 +1,61 @@
 <?php
 
-// Informasi profil pribadi
+// Personal profile information
 $profile = [
-    'name' => 'Nama Anda',
-    'job_title' => 'Pengembang Web | Desainer UI/UX',
-    'bio' => 'Hai! Saya adalah seorang pengembang web yang bersemangat dengan pengalaman dalam membangun aplikasi web yang responsif dan fungsional. Saya memiliki keahlian dalam PHP, JavaScript, dan desain antarmuka pengguna.',
-    'profile_pic' => 'assets/images/profile-placeholder.jpg' // Ganti dengan path foto Anda
+    'name' => 'Christopher Ivander Dicky Prayudhi',
+    'job_title' => 'Information Systems Specialist',
+    'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
+    'profile_pic' => 'assets/images/profile-placeholder.jpg' // Change with your photo path
 ];
 
-// Daftar keahlian
+// List of skills
 $skills = [
-    'HTML5',
-    'CSS3',
-    'JavaScript',
-    'PHP',
-    'MySQL',
-    'Git',
-    'Framework (seperti React atau Laravel)',
-    'Desain Responsif'
+    'Systems Analysis',
+    'Database Management (SQL, NoSQL)',
+    'Data Modeling',
+    'Business Process Management',
+    'Project Management',
+    'Cloud Computing (AWS/Azure)',
+    'UI/UX Design',
+    'Programming (Python, PHP, JavaScript)',
+    'Cybersecurity Principles'
 ];
 
-// Daftar proyek
+// List of projects
 $projects = [
     [
-        'title' => 'Website E-Commerce',
-        'description' => 'Sistem toko online yang dibangun dengan PHP dan MySQL. Fitur meliputi keranjang belanja, manajemen produk, dan checkout.',
-        'image' => 'assets/projects/project1.jpg', // Ganti dengan path gambar proyek Anda
-        'link' => 'https://github.com/nama-anda/ecommerce-project'
+        'title' => 'E-Commerce Analytics Dashboard',
+        'description' => 'Developed a real-time dashboard to monitor sales, customer behavior, and inventory using Python and a MySQL database.',
+        'link' => 'https://github.com/chris-ivander/ecommerce-dashboard'
     ],
     [
-        'title' => 'Aplikasi Manajemen Tugas',
-        'description' => 'Aplikasi web untuk mengelola daftar tugas harian. Menggunakan JavaScript untuk interaksi dinamis dan penyimpanan lokal.',
-        'image' => 'assets/projects/project2.jpg',
-        'link' => 'https://github.com/nama-anda/todo-app'
+        'title' => 'Automated HR System',
+        'description' => 'Designed and implemented an automated system for employee onboarding and payroll, reducing manual tasks by 40%.',
+        'link' => 'https://github.com/chris-ivander/hr-system'
     ],
     [
-        'title' => 'Blog Pribadi',
-        'description' => 'Platform blog sederhana dengan sistem CMS (Content Management System) yang dibangun dari nol.',
-        'image' => 'assets/projects/project3.jpg',
-        'link' => 'https://github.com/nama-anda/simple-blog'
+        'title' => 'Academic Information Portal',
+        'description' => 'Created a secure web portal for students to access grades and class schedules, improving information accessibility.',
+        'link' => 'https://github.com/chris-ivander/academic-portal'
     ]
 ];
 
-// Tautan media sosial
-$social_links = [
-    'github' => 'https://github.com/nama-anda',
-    'linkedin' => 'https://linkedin.com/in/nama-anda',
-    'twitter' => 'https://twitter.com/nama-anda'
+// Contact information
+$contact = [
+    [
+        'icon' => 'fas fa-envelope',
+        'text' => 'youremail@example.com'
+    ],
+    [
+        'icon' => 'fab fa-linkedin',
+        'text' => 'linkedin.com/in/chris-ivander'
+    ],
+    [
+        'icon' => 'fab fa-github',
+        'text' => 'github.com/chris-ivander'
+    ],
+    [
+        'icon' => 'fas fa-phone',
+        'text' => '+62 812 3456 7890'
+    ]
 ];
-
-?>
