@@ -1,4 +1,5 @@
 <?php
+// Load data from data.php
 require_once 'data.php';
 ?>
 <!DOCTYPE html>
@@ -12,6 +13,11 @@ require_once 'data.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/videos/tech-background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="main-container">
         <section id="profile" class="section profile-section">
             <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">

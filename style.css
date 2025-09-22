@@ -23,29 +23,31 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 2rem 0;
-    position: relative;
-    overflow: hidden; /* Mencegah scrollbar muncul saat background bergerak */
-    /* Tambahkan ini di bagian body::before */
-body::before {
-    /* ... kode yang sudah ada ... */
-    transform: translate(var(--move-x), var(--move-y));
-}
+    position: relative; /* Penting untuk posisi video */
+    z-index: 1; /* Konten di atas video */
 }
 
-/* Latar belakang yang dapat digerakkan */
+/* Video Background */
+#background-video {
+    position: fixed; /* Posisi tetap di layar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan video menutupi seluruh layar */
+    z-index: -1; /* Menempatkan video di belakang konten */
+}
+
+/* Overlay gelap untuk meningkatkan kontras */
 body::before {
     content: '';
     position: fixed;
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png'), url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f');
-    background-size: auto, cover;
-    background-attachment: scroll;
-    background-position: center center;
-    z-index: -1;
-    transition: transform 0.1s ease-out; /* Efek transisi yang halus */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Warna overlay */
+    z-index: 0;
 }
 
 /* Main Container (untuk memusatkan konten) */
@@ -56,7 +58,8 @@ body::before {
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 2rem;
-    position: relative; /* Pastikan konten di atas background */
+    position: relative;
+    z-index: 2; /* Memastikan konten container di atas overlay */
 }
 
 /* Sections */
