@@ -19,7 +19,7 @@ body {
     background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Menjadikan latar belakang statis saat scroll */
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     display: flex;
     justify-content: center;
@@ -30,16 +30,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Div animasi dihilangkan karena tidak lagi diperlukan */
-/* Div background-animation dihapus */
-
 /* Main Container (untuk memusatkan konten) */
 .main-container {
     max-width: 800px;
     width: 90%;
-    backdrop-filter: blur(10px); /* Efek blur yang lebih kuat */
-    -webkit-backdrop-filter: blur(10px); /* Dukungan browser */
-    background-color: rgba(10, 17, 26, 0.4); /* Background semi-transparan yang statis */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(10, 17, 26, 0.4);
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 2rem;
