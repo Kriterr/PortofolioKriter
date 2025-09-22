@@ -5,7 +5,7 @@ $profile = [
     'name' => 'Christopher Ivander Dicky Prayudhi',
     'job_title' => 'Information Systems Specialist',
     'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
-    'profile_pic' => 'https://imgur.com/a/2DVDekD'
+    'profile_pic' => 'https://angry-gray-q2o21aapvm.edgeone.app/'
 ];
 
 // List of skills
