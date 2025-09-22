@@ -29,6 +29,17 @@ body {
     overflow-x: hidden;
 }
 
+/* Main Content Container */
+.main-container {
+    max-width: 900px;
+    width: 90%;
+    background-color: rgba(10, 17, 26, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+}
 
 /* Sections - Transparan dengan Outline */
 .section {
