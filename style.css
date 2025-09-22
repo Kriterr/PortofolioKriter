@@ -1,36 +1,67 @@
-/* ===== CSS NAVBAR BARU DIMULAI ===== */
-html {
-    scroll-behavior: smooth;
-    /* Memberi jarak agar section tidak tertutup navbar saat di-scroll */
-    scroll-padding-top: 70px; 
+/* ===== PENGATURAN GLOBAL & VARIABEL ===== */
+:root {
+    --primary-color: #00BFFF;
+    --text-color: #e0e6ed;
+    --outline-color: rgba(255, 255, 255, 0.2);
+    --background-color-dark: #0a111a;
+    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    --profile-glow: 0 0 15px var(--primary-color);
+    --nav-height: 70px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color-dark);
+    background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1000&fit=max');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    padding-top: var(--nav-height); /* Hanya sisakan padding-top untuk navbar */
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
-    background-color: rgba(10, 17, 26, 0.8); /* Sama dengan .main-container */
+    background-color: rgba(10, 17, 26, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--outline-color);
-    height: 70px;
+    height: var(--nav-height);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    position: fixed; /* Tetap di atas */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
-    transition: background-color 0.3s ease;
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    width: 100%;
-    max-width: 1000px; /* Sesuaikan dengan lebar .main-container */
-    padding: 0 2rem;
+    height: var(--nav-height);
+    width: 90%; /* Dibuat 90% untuk padding mobile */
+    max-width: 900px; /* DISAMAKAN dengan .main-container */
+    margin: 0 auto; /* Otomatis di tengah */
+    /* padding: 0 2rem; Dihapus, diganti 'width' dan 'margin' */
 }
 
 .nav-logo {
@@ -38,19 +69,17 @@ html {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    text-align: center;
     gap: 1.5rem;
 }
 
 .nav-item {
-    height: 70px;
+    height: var(--nav-height);
     display: flex;
     align-items: center;
 }
@@ -69,57 +98,27 @@ html {
     color: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
 }
-/* ===== CSS NAVBAR BARU SELESAI ===== */
-/* ... di dalam area CSS Navbar ... */
 
 .nav-link.active {
     color: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
 }
-:root {
-    --primary-color: #00BFFF; /* Aksen biru cerah */
-    --text-color: #e0e6ed; /* Teks cerah */
-    --outline-color: rgba(255, 255, 255, 0.2); /* Outline transparan */
-    --background-color-dark: #0a111a; /* Background utama sangat gelap */
-    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3); /* Shadow saat hover */
-    --profile-glow: 0 0 15px var(--primary-color); /* Cahaya profil */
-}
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
     color: var(--text-color);
-    background-color: var(--background-color-dark);
-    background-image: url('https://cdn.momoi.cc/uploads/2025-09-22_dad9f48d6b/2025-09-22_fb1ed8e33c.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2.5rem 0;
-    overflow-x: hidden;
+    cursor: pointer;
 }
 
-/* Main Content Container */
+/* ===== KONTEN UTAMA ===== */
 .main-container {
-    max-width: 900px;
-    width: 90%;
-    background-color: rgba(10, 17, 26, 0.6);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-    padding: 2rem;
+    width: 90%; /* Dibuat 90% untuk padding mobile */
+    max-width: 900px; /* DISAMAKAN dengan .navbar-container */
+    margin: 0 auto; /* Otomatis di tengah */
+    padding: 2.5rem 0; /* Memberi jarak atas/bawah dari body */
 }
 
-/* Sections - Transparan dengan Outline */
 .section {
     background-color: transparent;
     padding: 2.5rem;
@@ -140,7 +139,7 @@ body {
     box-shadow: var(--card-hover-shadow);
 }
 
-/* Headings and Links */
+/* Headings */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -162,6 +161,7 @@ h2 {
     color: #999;
 }
 
+/* Link */
 .project-link, .certificate-link {
     display: inline-block;
     color: var(--primary-color);
@@ -174,7 +174,7 @@ h2 {
     color: #fff;
 }
 
-/* Profile Section - Gambar Bulat */
+/* Profile Section */
 .profile-header-content {
     text-align: center;
     background-color: transparent;
@@ -192,9 +192,9 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Contact List - Atas ke Bawah */
+/* Contact List */
 .contact-list-vertical {
-    display: block; /* Menjadikan elemen block untuk tumpukan vertikal */
+    display: block;
 }
 
 .contact-item {
@@ -205,7 +205,7 @@ h2 {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
-    margin-bottom: 1rem; /* Jarak antar item */
+    margin-bottom: 1rem;
 }
 
 .contact-item:hover {
@@ -214,7 +214,7 @@ h2 {
 
 .contact-icon {
     display: inline-block;
-    width: 2rem; /* Lebar tetap untuk ikon */
+    width: 2rem;
 }
 
 .contact-item i {
@@ -222,7 +222,7 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Skills List - Transparan dengan Outline */
+/* Skills List */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -244,7 +244,7 @@ h2 {
     background-color: rgba(0, 191, 255, 0.2);
 }
 
-/* Projects and Certificates - Transparan dengan Outline */
+/* Projects and Certificates Grid */
 .projects-grid, .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -286,4 +286,80 @@ h2 {
     padding: 1.5rem 0;
     font-size: 0.9rem;
     color: #888;
+}
+
+/* ===== PENGATURAN RESPONSIVE (MOBILE) ===== */
+
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        width: 90%; /* Memastikan padding di mobile */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        position: absolute;
+        top: var(--nav-height);
+        left: -100%; /* Sembunyi di luar layar */
+        opacity: 1;
+        transition: all 0.5s ease;
+        background: #0a111a; /* Background solid saat menu mobile terbuka */
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Pindahkan ke layar */
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        display: table;
+        border-bottom: 1px solid var(--outline-color);
+    }
+    
+    .nav-link:hover {
+        border-bottom: 1px solid var(--outline-color);
+        color: var(--primary-color);
+    }
+    
+    .nav-link.active {
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    .menu-icon {
+        display: block; /* Tampilkan ikon hamburger */
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+    }
+    
+    .menu-icon.is-active .fa-bars {
+        /* (Opsional) Animasi ganti ikon, untuk sekarang kita biarkan */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+
+    .section {
+        padding: 1.5rem; /* Kurangi padding section di mobile */
+    }
+    
+    .projects-grid, .certificates-grid {
+        grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
+    }
 }
