@@ -5,7 +5,7 @@ $profile = [
     'name' => 'Christopher Ivander Dicky Prayudhi',
     'job_title' => 'Information Systems Specialist',
     'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
-    'profile_pic' => 'assets/images/profile-placeholder.jpg' // Change with your photo path
+    'profile_pic' => 'assets/images/profile-placeholder.jpg'
 ];
 
 // List of skills
@@ -40,22 +40,10 @@ $projects = [
     ]
 ];
 
-// Contact information
+// Contact information (updated to be easily used as hyperlinks)
 $contact = [
-    [
-        'icon' => 'fas fa-envelope',
-        'text' => 'youremail@example.com'
-    ],
-    [
-        'icon' => 'fab fa-linkedin',
-        'text' => 'linkedin.com/in/chris-ivander'
-    ],
-    [
-        'icon' => 'fab fa-github',
-        'text' => 'github.com/chris-ivander'
-    ],
-    [
-        'icon' => 'fas fa-phone',
-        'text' => '+62 812 3456 7890'
-    ]
+    'email' => 'youremail@example.com',
+    'linkedin' => 'linkedin.com/in/chris-ivander',
+    'github' => 'github.com/chris-ivander',
+    'phone' => '+62 812 3456 7890'
 ];
