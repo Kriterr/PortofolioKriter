@@ -1,5 +1,4 @@
 <?php
-// Load data from data.php
 require_once 'data.php';
 ?>
 <!DOCTYPE html>
