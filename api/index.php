@@ -1,5 +1,4 @@
 <?php
-// Load data from data.php
 require_once 'data.php';
 ?>
 <!DOCTYPE html>
@@ -29,10 +28,10 @@ require_once 'data.php';
             <h2>Contact</h2>
             <div class="contact-grid">
                 <?php foreach ($contact as $item) : ?>
-                    <a href="<?php echo $item['link']; ?>" target="_blank" class="contact-item">
+                    <div class="contact-item">
                         <i class="<?php echo $item['icon']; ?>"></i>
                         <span><?php echo $item['text']; ?></span>
-                    </a>
+                    </div>
                 <?php endforeach; ?>
             </div>
         </section>

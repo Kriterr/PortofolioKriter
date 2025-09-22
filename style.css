@@ -1,8 +1,9 @@
 :root {
     --primary-color: #00BFFF; /* Aksen biru cerah */
-    --secondary-color: #1a2a3a; /* Biru tua untuk teks */
+    --secondary-color: #1a2a3a; /* Biru tua untuk card */
     --text-color: #e0e6ed; /* Teks cerah */
-    --border-color: rgba(255, 255, 255, 0.2); /* Border transparan */
+    --card-bg-color: rgba(26, 42, 58, 0.4); /* Card transparan */
+    --border-color: rgba(255, 255, 255, 0.1);
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -16,8 +17,8 @@ body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #0a111a;
-    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png'), url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f');
+    background-color: #0a111a; /* Background hitam gelap */
+    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png'), url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f'); /* Ganti dengan gambar tech */
     background-size: auto, cover;
     background-attachment: fixed;
     background-position: center;
@@ -41,17 +42,16 @@ body {
 
 /* Sections */
 .section {
-    background-color: transparent; /* Transparan */
+    background-color: var(--card-bg-color);
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color); /* Hanya outline */
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    background-color: rgba(26, 42, 58, 0.6);
 }
 
 /* Profile Section */
@@ -103,7 +103,7 @@ h2 {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .contact-item {
@@ -112,12 +112,6 @@ h2 {
     gap: 1rem;
     font-size: 1rem;
     color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-item:hover {
-    color: var(--primary-color);
 }
 
 .contact-item i {
@@ -134,8 +128,8 @@ h2 {
 }
 
 .skills-list li {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -154,16 +148,16 @@ h2 {
 }
 
 .project-card {
-    background-color: transparent; /* Transparan */
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color); /* Hanya outline */
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
