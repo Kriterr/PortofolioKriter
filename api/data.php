@@ -70,7 +70,7 @@ $certificates = [
         'title' => 'AWS Certified Cloud Practitioner',
         'issuer' => 'Amazon Web Services (AWS)',
         'date' => 'Issued May 2024',
-        'link' => 'https://www.aws.org/credential/link' // Ganti dengan tautan kredensial Anda
+        'link' => 'https://www.aws.org/credential/link'
     ],
     [
         'title' => 'Google Project Management',
