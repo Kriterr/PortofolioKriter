@@ -15,6 +15,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: #0a111a;
+    /* Latar belakang statis bertema teknologi */
+    background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Menjadikan latar belakang statis saat scroll */
     -webkit-font-smoothing: antialiased;
     display: flex;
     justify-content: center;
@@ -25,44 +30,16 @@ body {
     overflow-x: hidden;
 }
 
-/* Animasi Latar Belakang */
-.background-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-    background: #0a111a;
-}
-
-.background-animation::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle, rgba(0, 191, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-    animation: move-background 60s linear infinite;
-}
-
-@keyframes move-background {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 100%;
-    }
-}
+/* Div animasi dihilangkan karena tidak lagi diperlukan */
+/* Div background-animation dihapus */
 
 /* Main Container (untuk memusatkan konten) */
 .main-container {
     max-width: 800px;
     width: 90%;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px); /* Efek blur yang lebih kuat */
+    -webkit-backdrop-filter: blur(10px); /* Dukungan browser */
+    background-color: rgba(10, 17, 26, 0.4); /* Background semi-transparan yang statis */
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 2rem;
