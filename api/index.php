@@ -1,4 +1,5 @@
 <?php
+// Load data from data.php
 require_once 'data.php';
 ?>
 <!DOCTYPE html>
@@ -12,56 +13,70 @@ require_once 'data.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="main-container">
-        <section id="profile" class="section profile-section">
-            <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
-            <h1><?php echo $profile['name']; ?></h1>
-            <p class="job-title"><?php echo $profile['job_title']; ?></p>
-        </section>
+    <header class="header">
+        <div class="container">
+            <div class="profile-header">
+                <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
+                <h1><?php echo $profile['name']; ?></h1>
+                <p><?php echo $profile['job_title']; ?></p>
+            </div>
+        </div>
+    </header>
 
+    <main class="main-content">
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p><?php echo $profile['bio']; ?></p>
+            <div class="container">
+                <h2>About Me</h2>
+                <p><?php echo $profile['bio']; ?></p>
+            </div>
         </section>
 
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <?php foreach ($contact as $item) : ?>
-                    <div class="contact-item">
-                        <i class="<?php echo $item['icon']; ?>"></i>
-                        <span><?php echo $item['text']; ?></span>
-                    </div>
-                <?php endforeach; ?>
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-grid">
+                    <?php foreach ($contact as $item) : ?>
+                        <div class="contact-item">
+                            <i class="<?php echo $item['icon']; ?>"></i>
+                            <span><?php echo $item['text']; ?></span>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </section>
 
         <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <?php foreach ($skills as $skill) : ?>
-                    <li><?php echo $skill; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <?php foreach ($projects as $project) : ?>
-                    <div class="project-card">
-                        <h3><?php echo $project['title']; ?></h3>
-                        <p><?php echo $project['description']; ?></p>
-                        <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                <?php endforeach; ?>
+            <div class="container">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <?php foreach ($skills as $skill) : ?>
+                        <li><?php echo $skill; ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </section>
 
-        <footer class="footer">
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <?php foreach ($projects as $project) : ?>
+                        <div class="project-card">
+                            <h3><?php echo $project['title']; ?></h3>
+                            <p><?php echo $project['description']; ?></p>
+                            <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
             <p>&copy; <?php echo date("Y"); ?> Christopher Ivander Dicky Prayudhi. All Rights Reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

@@ -12,10 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
 
-        // Calculate the movement distance (adjust multiplier for speed)
-        const moveX = (mouseX - centerX) * 0.01;
-        const moveY = (mouseY - centerY) * 0.01;
-
+        
         // Apply the transform to the background pseudo-element
         // We target the ::before pseudo-element's transform directly
         background.style.setProperty('--move-x', `${moveX}px`);
