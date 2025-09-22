@@ -1,3 +1,81 @@
+/* ===== CSS NAVBAR BARU DIMULAI ===== */
+html {
+    scroll-behavior: smooth;
+    /* Memberi jarak agar section tidak tertutup navbar saat di-scroll */
+    scroll-padding-top: 70px; 
+}
+
+.navbar {
+    background-color: rgba(10, 17, 26, 0.8); /* Sama dengan .main-container */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--outline-color);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: fixed; /* Tetap di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    max-width: 1000px; /* Sesuaikan dengan lebar .main-container */
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.nav-item {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+/* ===== CSS NAVBAR BARU SELESAI ===== */
+/* ... di dalam area CSS Navbar ... */
+
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
 :root {
     --primary-color: #00BFFF; /* Aksen biru cerah */
     --text-color: #e0e6ed; /* Teks cerah */
