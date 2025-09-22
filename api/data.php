@@ -40,10 +40,26 @@ $projects = [
     ]
 ];
 
-// Contact information (updated to be easily used as hyperlinks)
+// Contact information with links
 $contact = [
-    'email' => 'youremail@example.com',
-    'linkedin' => 'linkedin.com/in/chris-ivander',
-    'github' => 'github.com/chris-ivander',
-    'phone' => '+62 812 3456 7890'
+    [
+        'icon' => 'fas fa-envelope',
+        'text' => 'youremail@example.com',
+        'link' => 'mailto:youremail@example.com'
+    ],
+    [
+        'icon' => 'fab fa-linkedin',
+        'text' => 'LinkedIn',
+        'link' => 'https://linkedin.com/in/chris-ivander'
+    ],
+    [
+        'icon' => 'fab fa-github',
+        'text' => 'GitHub',
+        'link' => 'https://github.com/chris-ivander'
+    ],
+    [
+        'icon' => 'fas fa-phone',
+        'text' => '+62 812 3456 7890',
+        'link' => 'tel:+6281234567890'
+    ]
 ];

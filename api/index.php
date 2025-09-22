@@ -1,4 +1,5 @@
 <?php
+// Load data from data.php
 require_once 'data.php';
 ?>
 <!DOCTYPE html>
@@ -27,22 +28,12 @@ require_once 'data.php';
         <section id="contact" class="section">
             <h2>Contact</h2>
             <div class="contact-grid">
-                <a href="mailto:<?php echo $contact['email']; ?>" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span><?php echo $contact['email']; ?></span>
-                </a>
-                <a href="https://<?php echo $contact['linkedin']; ?>" target="_blank" class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span><?php echo $contact['linkedin']; ?></span>
-                </a>
-                <a href="https://<?php echo $contact['github']; ?>" target="_blank" class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <span><?php echo $contact['github']; ?></span>
-                </a>
-                <a href="tel:<?php echo $contact['phone']; ?>" class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span><?php echo $contact['phone']; ?></span>
-                </a>
+                <?php foreach ($contact as $item) : ?>
+                    <a href="<?php echo $item['link']; ?>" target="_blank" class="contact-item">
+                        <i class="<?php echo $item['icon']; ?>"></i>
+                        <span><?php echo $item['text']; ?></span>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </section>
 

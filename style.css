@@ -1,8 +1,8 @@
 :root {
     --primary-color: #00BFFF; /* Aksen biru cerah */
-    --secondary-color: #1a2a3a; /* Biru tua untuk background */
+    --secondary-color: #1a2a3a; /* Biru tua untuk teks */
     --text-color: #e0e6ed; /* Teks cerah */
-    --border-color: rgba(255, 255, 255, 0.2);
+    --border-color: rgba(255, 255, 255, 0.2); /* Border transparan */
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -45,17 +45,19 @@ body {
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color); /* Garis tepi */
-    transition: border-color 0.3s ease-in-out;
+    border: 1px solid var(--border-color); /* Hanya outline */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .section:hover {
-    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
 }
 
 /* Profile Section */
 .profile-section {
     text-align: center;
+    background-color: transparent;
     border: none;
     padding-bottom: 0;
 }
@@ -101,7 +103,7 @@ h2 {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .contact-item {
@@ -111,12 +113,11 @@ h2 {
     font-size: 1rem;
     color: var(--text-color);
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s;
 }
 
 .contact-item:hover {
     color: var(--primary-color);
-    transform: translateX(5px);
 }
 
 .contact-item i {
@@ -135,15 +136,14 @@ h2 {
 .skills-list li {
     background-color: transparent;
     border: 1px solid var(--border-color);
-    border-left: 3px solid var(--primary-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: border-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .skills-list li:hover {
-    border-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Projects */
@@ -157,14 +157,13 @@ h2 {
     background-color: transparent; /* Transparan */
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: border-color 0.3s, transform 0.3s;
+    border: 1px solid var(--border-color); /* Hanya outline */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
 }
 
 .project-card h3 {
