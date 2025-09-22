@@ -13,7 +13,9 @@ require_once 'data.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="background-animation"></div> <div class="main-container">
+    <div class="background-animation"></div>
+
+    <div class="main-container">
         <section id="profile" class="section profile-section">
             <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
             <h1><?php echo $profile['name']; ?></h1>
