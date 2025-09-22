@@ -44,23 +44,23 @@ $projects = [
 $contact = [
     [
         'icon' => 'fas fa-envelope',
-        'text' => 'youremail@example.com',
-        'link' => 'mailto:youremail@example.com'
+        'text' => 'christopherivanderp@gmail.com',
+        'link' => 'mailto:christopherivanderp@gmail.com'
     ],
     [
         'icon' => 'fab fa-linkedin',
         'text' => 'LinkedIn',
-        'link' => 'https://linkedin.com/in/chris-ivander'
+        'link' => 'https://www.linkedin.com/in/christopher-ivander-dicky-prayudhi-36b948293/'
     ],
     [
         'icon' => 'fab fa-github',
         'text' => 'GitHub',
-        'link' => 'https://github.com/chris-ivander'
+        'link' => 'https://github.com/Kriterr'
     ],
     [
         'icon' => 'fas fa-phone',
-        'text' => '+62 812 3456 7890',
-        'link' => 'tel:+6281234567890'
+        'text' => '+62 812 8543 6662',
+        'link' => 'tel:+6281285436662'
     ]
 ];
 
