@@ -7,7 +7,7 @@ require_once 'data.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $profile['name']; ?> - Portofolio</title>
+    <title><?php echo $profile['name']; ?> - Portofolio SI</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,35 +22,38 @@ require_once 'data.php';
     <main class="main-content">
         <section id="about" class="section">
             <div class="container">
-                <div class="profile-pic-container">
-                    <img src="<?php echo $profile['profile_pic']; ?>" alt="Foto <?php echo $profile['name']; ?>" class="profile-pic">
-                </div>
                 <h2>Tentang Saya</h2>
-                <p><?php echo $profile['bio']; ?></p>
+                <div class="profile-info">
+                    <img src="<?php echo $profile['profile_pic']; ?>" alt="Foto <?php echo $profile['name']; ?>" class="profile-pic">
+                    <div class="profile-text">
+                        <p><?php echo $profile['bio']; ?></p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="skills" class="section">
             <div class="container">
-                <h2>Keahlian</h2>
-                <ul class="skills-list">
+                <h2>Keahlian Teknis</h2>
+                <div class="skills-grid">
                     <?php foreach ($skills as $skill) : ?>
-                        <li><?php echo $skill; ?></li>
+                        <div class="skill-item"><?php echo $skill; ?></div>
                     <?php endforeach; ?>
-                </ul>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="section">
             <div class="container">
-                <h2>Proyek</h2>
+                <h2>Proyek & Studi Kasus</h2>
                 <div class="projects-grid">
                     <?php foreach ($projects as $project) : ?>
                         <div class="project-card">
-                            <img src="<?php echo $project['image']; ?>" alt="Gambar <?php echo $project['title']; ?>" class="project-image">
-                            <h3><?php echo $project['title']; ?></h3>
-                            <p><?php echo $project['description']; ?></p>
-                            <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">Lihat Proyek</a>
+                            <div class="project-content">
+                                <h3><?php echo $project['title']; ?></h3>
+                                <p><?php echo $project['description']; ?></p>
+                                <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">Lihat Proyek</a>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
