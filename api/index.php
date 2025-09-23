@@ -16,8 +16,9 @@ require_once 'data.php';
 
     <nav class="navbar">
         <div class="navbar-container">
+            <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">Profile</a>
+                    <a href="#profile" class="nav-link">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
