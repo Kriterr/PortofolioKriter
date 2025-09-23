@@ -29,9 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
+                
+                // Hapus .active dari semua link
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-a             });
+                });
+
+                // Tambahkan .active ke link yang sesuai
                 const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
@@ -42,41 +46,15 @@ a             });
 
     const scrollObserver = new IntersectionObserver(highlightNav, {
         root: null,
-        rootMargin: '-50% 0px -50% 0px', 
+        rootMargin: '-50% 0px -50% 0px', // Aktif saat section berada di tengah layar
         threshold: 0
     });
 
     allSections.forEach(section => {
-        if (section.id !== 'profile') {
-            scrollObserver.observe(section);
-        }
+        // Kita amati semua section termasuk profile
+        scrollObserver.observe(section);
     });
     
-    // ===== KODE UNTUK MENU HAMBURGER (MOBILE) =====
-    const menuIcon = document.getElementById('menu-icon');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuIcon.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        const icon = menuIcon.querySelector('i');
-        if (navMenu.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                const icon = menuIcon.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
+    // (Tidak ada kode menu hamburger di versi ini)
 
 }); // <-- Ini adalah penutup dari DOMContentLoaded

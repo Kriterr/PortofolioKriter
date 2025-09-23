@@ -1,38 +1,41 @@
 /* ===== PENGATURAN GLOBAL & VARIABEL ===== */
 :root {
-    --primary-color: #00BFFF;
-    --text-color: #e0e6ed;
-    --outline-color: rgba(255, 255, 255, 0.2);
-    --background-color-dark: #0a111a;
-    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
-    --profile-glow: 0 0 15px var(--primary-color);
-    --nav-height: 70px;
+    --primary-color: #00BFFF;
+    --text-color: #e0e6ed;
+    --outline-color: rgba(255, 255, 255, 0.2);
+    --background-color-dark: #0a111a;
+    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    --profile-glow: 0 0 15px var(--primary-color);
+    --nav-height: 70px; /* Tinggi navbar awal */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--nav-height);
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height); /* Untuk padding saat scroll */
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    padding-top: var(--nav-height); /* Memberi ruang untuk navbar fixed */
+    overflow-x: hidden;
+
+    /* Background ada di sini */
     background-color: var(--background-color-dark);
-    background-image: url('https://images.unsplash.com/photo-1518770660439-466d1f1f2a4f?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1000&fit=max');
+    background-image: linear-gradient(rgba(10, 17, 26, 0.9), rgba(10, 17, 26, 0.9)), 
+                      url('assets/backgroundimage.jpg'); /* Pastikan path ini benar! */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
-    padding-top: var(--nav-height); /* Hanya sisakan padding-top untuk navbar */
-    overflow-x: hidden;
 }
 
 /* ===== NAVBAR ===== */
@@ -46,7 +49,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    position: fixed;
+    position: fixed; /* Tetap di atas */
     top: 0;
     left: 0;
     width: 100%;
@@ -55,12 +58,13 @@ body {
 
 .navbar-container {
     display: flex;
-    justify-content: flex-end; /* Ini mendorong menu ke kanan */
+    justify-content: space-between; /* Home di kiri, Menu di kanan */
     align-items: center;
     height: var(--nav-height);
-    width: 90%; 
-    max-width: 900px; 
-    margin: 0 auto; 
+    width: 100%;
+    max-width: 900px; /* Lebar konten */
+    padding: 0 1rem; /* Padding horizontal */
+    margin: 0 auto;
 }
 
 .nav-logo {
@@ -103,262 +107,199 @@ body {
     border-bottom: 3px solid var(--primary-color);
 }
 
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    cursor: pointer;
-}
+/* (Tidak ada .menu-icon atau @media query untuk navbar di versi ini) */
+
 
 /* ===== KONTEN UTAMA ===== */
 .main-container {
-    width: 90%; /* Dibuat 90% untuk padding mobile */
-    max-width: 900px; /* DISAMAKAN dengan .navbar-container */
-    margin: 0 auto; /* Otomatis di tengah */
-    padding: 2.5rem 0; /* Memberi jarak atas/bawah dari body */
+    width: 90%; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 2.5rem 0; 
 }
 
 .section {
-    background-color: transparent;
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--outline-color);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s;
+    background-color: transparent;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--outline-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s;
 }
 
 .section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section:hover {
-    box-shadow: var(--card-hover-shadow);
+    box-shadow: var(--card-hover-shadow);
 }
 
 /* Headings */
 h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
-    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1rem;
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--outline-color);
-    padding-bottom: 0.75rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--outline-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .job-title {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #999;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #999;
 }
 
 /* Link */
 .project-link, .certificate-link {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 .project-link:hover, .certificate-link:hover {
-    color: #fff;
+    color: #fff;
 }
 
 /* Profile Section */
 .profile-header-content {
-    text-align: center;
-    background-color: transparent;
-    border: none;
-    padding-bottom: 0;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--primary-color);
-    box-shadow: var(--profile-glow);
-    margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--profile-glow);
+    margin-bottom: 1rem;
 }
 
 /* Contact List */
 .contact-list-vertical {
-    display: block;
+    display: block;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1rem;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-bottom: 1rem;
 }
 
 .contact-item:hover {
-    color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .contact-icon {
-    display: inline-block;
-    width: 2rem;
+    display: inline-block;
+    width: 2rem;
 }
 
 .contact-item i {
-    font-size: 1.2rem;
-    color: var(--primary-color);
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 
 /* Skills List */
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.75rem;
 }
 
 .skills-list li {
-    background-color: transparent;
-    border: 1px solid var(--outline-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    background-color: transparent;
+    border: 1px solid var(--outline-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 .skills-list li:hover {
-    background-color: rgba(0, 191, 255, 0.2);
+    background-color: rgba(0, 191, 255, 0.2);
 }
 
 /* Projects and Certificates Grid */
 .projects-grid, .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 .project-card, .certificate-item {
-    background-color: transparent;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--outline-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--outline-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover, .certificate-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
 }
 
 .project-card h3, .certificate-item h3 {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 .certificate-item .issuer, .certificate-item .date {
-    font-size: 0.9rem;
-    color: #888;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 .certificate-item .date {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
 .footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9rem;
-    color: #888;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 /* ===== PENGATURAN RESPONSIVE (MOBILE) ===== */
 
-@media screen and (max-width: 960px) {
-    .navbar-container {
-        width: 90%; /* Memastikan padding di mobile */
-    }
-
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - var(--nav-height));
-        position: absolute;
-        top: var(--nav-height);
-        left: -100%; /* Sembunyi di luar layar */
-        opacity: 1;
-        transition: all 0.5s ease;
-        background: #0a111a; /* Background solid saat menu mobile terbuka */
-        gap: 0;
-    }
-
-    .nav-menu.active {
-        left: 0; /* Pindahkan ke layar */
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
-
-    .nav-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .nav-link {
-        text-align: center;
-        padding: 2rem 0;
-        width: 100%;
-        display: table;
-        border-bottom: 1px solid var(--outline-color);
-    }
-    
-    .nav-link:hover {
-        border-bottom: 1px solid var(--outline-color);
-        color: var(--primary-color);
-    }
-    
-    .nav-link.active {
-        border-bottom: 1px solid var(--primary-color);
-    }
-
-    .menu-icon {
-        display: block; /* Tampilkan ikon hamburger */
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-    }
-    
-    .menu-icon.is-active .fa-bars {
-        /* (Opsional) Animasi ganti ikon, untuk sekarang kita biarkan */
-    }
-}
+/* (Tidak ada @media query untuk navbar di versi ini) */
 
 @media screen and (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
 
-    .section {
-        padding: 1.5rem; /* Kurangi padding section di mobile */
-    }
-    
-    .projects-grid, .certificates-grid {
-        grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
-    }
+    .section {
+        padding: 1.5rem; /* Kurangi padding section di mobile */
+    }
+    
+    .projects-grid, .certificates-grid {
+        grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
+    }
 }
