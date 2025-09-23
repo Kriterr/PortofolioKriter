@@ -16,26 +16,35 @@ require_once 'data.php';
 
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#profile" class="nav-logo">Home</a>
-            <ul class="nav-menu">
+            
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#profile" class="nav-link">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#certificates" class="nav-link">Certificates</a>
+                    <a href="#about" class="nav-link">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skill</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Project</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="#certificates" class="nav-link">Certificate</a>
+                </li>
             </ul>
         </div>
     </nav>
+    
+
     <div class="main-container">
         <section id="profile" class="section">
             <div class="profile-header-content">
