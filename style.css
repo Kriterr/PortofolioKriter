@@ -25,7 +25,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color-dark);
-    background-image: url('https://cdn.momoi.cc/uploads/2025-09-23_7267a4f27e/2025-09-23_01588cb2d0.jpg');
+    background-image: url('assets/backgroundimage.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
