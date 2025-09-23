@@ -1,106 +1,73 @@
 <?php
-// Load data from data.php
+// FILE: index.php
 require_once 'data.php';
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $profile['name']; ?> - Portfolio</title>
+    <title><?php echo e($data['personal']['name']); ?> | <?php echo e($data['personal']['tagline']); ?></title>
+    <meta name="description" content="<?php echo e($data['about']['description']); ?>">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-container">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#profile" class="nav-link">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Project</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#certificates" class="nav-link">Certificate</a>
-                </li>
-                </ul>
-        </div>
-    </nav>
-    <div class="main-container">
-        <section id="profile" class="section">
-            <div class="profile-header-content">
-                <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
-                <h1><?php echo $profile['name']; ?></h1>
-                <p class="job-title"><?php echo $profile['job_title']; ?></p>
+    <header class="container">
+        <nav>
+            <div class="logo"><?php echo e($data['personal']['name']); ?></div>
+            <ul>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container reveal-fade">
+            <h1><?php echo e($data['personal']['tagline']); ?></h1>
+            <p class="hero-subtext">Berbasis di Jakarta, Indonesia. Menciptakan karya yang luar biasa sederhana dan sangat fungsional.</p>
+            <a href="mailto:<?php echo e($data['personal']['email']); ?>" class="cta-button">Hubungi Saya</a>
+        </section>
+
+        <section id="about" class="container reveal-fade">
+            <div class="section-content about-content">
+                <h2><?php echo e($data['about']['title']); ?></h2>
+                <p><?php echo e($data['about']['description']); ?></p>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p><?php echo $profile['bio']; ?></p>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-list-vertical">
-                <?php foreach ($contact as $item) : ?>
-                    <a href="<?php echo $item['link']; ?>" target="_blank" class="contact-item">
-                        <div class="contact-icon"><i class="<?php echo $item['icon']; ?>"></i></div>
-                        <span class="contact-text"><?php echo $item['text']; ?></span>
+        <section id="portfolio" class="container reveal-fade">
+            <h2>Karya Pilihan</h2>
+            <div class="portfolio-grid">
+                <?php foreach ($data['projects'] as $project): ?>
+                    <a href="<?php echo e($project['link']); ?>" class="project-card reveal-fade" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo e($project['image_url']); ?>" alt="<?php echo e($project['title']); ?>">
+                        <div class="card-content">
+                            <h3><?php echo e($project['title']); ?></h3>
+                            <p class="category"><?php echo e($project['category']); ?></p>
+                            <p><?php echo e($project['description']); ?></p>
+                        </div>
                     </a>
                 <?php endforeach; ?>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <?php foreach ($skills as $skill) : ?>
-                    <li><?php echo $skill; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </section>
+    </main>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <?php foreach ($projects as $project) : ?>
-                    <div class="project-card">
-                        <h3><?php echo $project['title']; ?></h3>
-                        <p><?php echo $project['description']; ?></p>
-                        <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </section>
+    <footer id="contact" class="container reveal-fade">
+        <h2>Tertarik bekerja sama?</h2>
+        <p>Ayo bicara.</p>
+        <a href="mailto:<?php echo e($data['personal']['email']); ?>" class="contact-link"><?php echo e($data['personal']['email']); ?></a>
+        <div class="social-links">
+            <a href="<?php echo e($data['personal']['linkedin']); ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="<?php echo e($data['personal']['github']); ?>" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <p class="copyright">&copy; <?php echo date('Y'); ?> <?php echo e($data['personal']['name']); ?>. Didesain dengan penuh ketelitian.</p>
+    </footer>
 
-        <section id="certificates" class="section">
-            <h2>Certificates</h2>
-            <div class="certificates-grid">
-                <?php foreach ($certificates as $certificate) : ?>
-                    <div class="certificate-item">
-                        <h3><?php echo $certificate['title']; ?></h3>
-                        <p class="issuer"><?php echo $certificate['issuer']; ?></p>
-                        <p class="date"><?php echo $certificate['date']; ?></p>
-                        <a href="<?php echo $certificate['link']; ?>" target="_blank" class="certificate-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>&copy; <?php echo date("Y"); ?> Christopher Ivander Dicky Prayudhi. All Rights Reserved.</p>
-        </footer>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>

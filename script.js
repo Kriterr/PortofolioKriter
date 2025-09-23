@@ -1,24 +1,24 @@
 // Kode Intersection Observer Anda yang sudah ada
 document.addEventListener('DOMContentLoaded', () => {
-    const fadeInOnScroll = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
+    const fadeInOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
 
-    const observer = new IntersectionObserver(fadeInOnScroll, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2
-    });
+    const observer = new IntersectionObserver(fadeInOnScroll, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    });
 
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
     // ===== KODE BARU UNTUK HIGHLIGHT NAVBAR =====
     const navLinks = document.querySelectorAll('.nav-link');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 // Temukan link yang sesuai (cth: href="#about") dan tambahkan 'active'
-                const activeLink = document.querySelector(.nav-link[href="#${id}"]);
+                const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
                 }

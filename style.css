@@ -344,7 +344,9 @@ h2 {
         transform: translate(-100%, 60%);
     }
     
-    
+    .menu-icon.is-active .fa-bars {
+        /* (Opsional) Animasi ganti ikon, untuk sekarang kita biarkan */
+    }
 }
 
 @media screen and (max-width: 768px) {
