@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scrollObserver = new IntersectionObserver(highlightNav, {
         root: null,
-        rootMargin: '-50% 0px -50% 0px', // Aktif saat section berada di tengah layar
+        rootMargin: '-80% 0px -40% 0px', // Aktif saat section berada di tengah layar
         threshold: 0
     });
 
