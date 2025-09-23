@@ -1,12 +1,17 @@
 /* ===== PENGATURAN GLOBAL & VARIABEL ===== */
+/* ===== PENGATURAN GLOBAL & VARIABEL ===== */
 :root {
-    --primary-color: #00BFFF;
-    --text-color: #e0e6ed;
-    --outline-color: rgba(255, 255, 255, 0.2);
-    --background-color-dark: #0a111a;
-    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
-    --profile-glow: 0 0 15px var(--primary-color);
-    --nav-height: =60px;
+    --primary-color: #00BFFF;
+    --text-color: #e0e6ed;
+    --outline-color: rgba(255, 255, 255, 0.2);
+    --background-color-dark: #0a111a;
+    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    --profile-glow: 0 0 15px var(--primary-color);
+    
+    /*      * Hapus tanda '=' dan ubah ke 70px untuk memberi jarak tambahan. 
+     * (Anda bisa atur ke 60px jika ingin pas, atau 75px jika ingin lebih jauh) 
+    */
+    --nav-height: 70px; 
 }
 
 * {
