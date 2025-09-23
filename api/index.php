@@ -53,8 +53,7 @@ require_once 'data.php';
                 <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
                 <h1><?php echo $profile['name']; ?></h1>
                 <p class="job-title"><?php echo $profile['job_title']; ?></p>
-          _ </div>
-        </section>
+            </div>         </section>
 
         <section id="about" class="section">
             <h2>About Me</h2>
@@ -91,8 +90,7 @@ require_once 'data.php';
                         <p><?php echo $project['description']; ?></p>
                         <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
                     </div>
-      _       <?php endforeach; ?>
-            </div>
+                <?php endforeach; ?>             </div>
         </section>
 
         <section id="certificates" class="section">

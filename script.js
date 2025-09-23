@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
-A               }
+                } // Karakter 'A' yang error sudah dihapus dari sini
             }
         });
     };
