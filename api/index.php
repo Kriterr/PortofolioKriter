@@ -46,7 +46,6 @@ require_once 'data.php';
         </div>
     </nav>
     
-
     <div class="main-container">
         <section id="profile" class="section">
             <div class="profile-header-content">

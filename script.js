@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
-              . }
+                }
             }
         });
     };
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     allSections.forEach(section => {
         if (section.id !== 'profile') {
             scrollObserver.observe(section);
-        }
+F       }
     });
     
     // ===== KODE UNTUK MENU HAMBURGER (MOBILE) =====
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* =======================================================
-       KODE KONFIGURASI PARTICLES.JS DIPINDAHKAN KE DALAM SINI
+       KODE KONFIGURASI PARTICLES.JS (SUDAH DI DALAM)
        ======================================================= */
 
     particlesJS('particles-js',
