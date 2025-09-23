@@ -1,20 +1,12 @@
-/* FILE: style.css */
-
-/* 1. Variabel Global & Reset */
+/* ===== PENGATURAN GLOBAL & VARIABEL ===== */
 :root {
-    --color-background: #111111; /* Hitam pekat 'Pro' */
-    --color-surface: #1d1d1f;   /* Abu-abu gelap 'Pro' */
-    --color-text-primary: #f5f5f7; /* Putih pudar (off-white) */
-    --color-text-secondary: #a1a1a6; /* Abu-abu medium */
-    --color-accent: #007aff;      /* Biru Apple klasik */
-    
-    /* Menggunakan font sistem untuk nuansa asli (seperti Apple SF Pro) */
-    --font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-                          Helvetica, Arial, sans-serif, "Apple Color Emoji", 
-                          "Segoe UI Emoji", "Segoe UI Symbol";
-
-    --border-radius-main: 16px;
-    --transition-main: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --primary-color: #00BFFF;
+    --text-color: #e0e6ed;
+    --outline-color: rgba(255, 255, 255, 0.2);
+    --background-color-dark: #0a111a;
+    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    --profile-glow: 0 0 15px var(--primary-color);
+    --nav-height: 70px;
 }
 
 * {
@@ -25,253 +17,347 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
 }
 
 body {
-    font-family: var(--font-family-main);
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color-dark);
+    background-image: url('assets/backgroundimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    padding-top: var(--nav-height); /* Hanya sisakan padding-top untuk navbar */
+    overflow-x: hidden;
 }
 
-/* 2. Layout Utility */
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-}
-
-h1, h2, h3 {
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-size: 3.5rem;
-    color: var(--color-text-primary);
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: var(--color-text-primary);
-    margin-bottom: 2rem;
-}
-
-h3 {
-    font-size: 1.25rem;
-}
-
-p {
-    margin-bottom: 1.5rem;
-    color: var(--color-text-secondary);
-    font-size: 1.1rem;
-}
-
-a {
-    color: var(--color-accent);
-    text-decoration: none;
-    transition: var(--transition-main);
-}
-
-a:hover {
-    opacity: 0.7;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* 3. Header & Navigasi */
-header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-nav {
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: rgba(10, 17, 26, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--outline-color);
+    height: var(--nav-height);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
-nav .logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-}
-
-nav ul {
+.navbar-container {
     display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: var(--nav-height);
+    width: 90%; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.nav-logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
     list-style: none;
     gap: 1.5rem;
 }
 
-nav ul li a {
-    color: var(--color-text-secondary);
+.nav-item {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
     font-weight: 500;
-    font-size: 0.95rem;
 }
 
-nav ul li a:hover {
-    color: var(--color-text-primary);
+.nav-link:hover {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* ===== KONTEN UTAMA ===== */
+.main-container {
+    width: 90%; /* Dibuat 90% untuk padding mobile */
+    max-width: 900px; /* DISAMAKAN dengan .navbar-container */
+    margin: 0 auto; /* Otomatis di tengah */
+    padding: 2.5rem 0; /* Memberi jarak atas/bawah dari body */
+}
+
+.section {
+    background-color: transparent;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--outline-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s;
+}
+
+.section.is-visible {
     opacity: 1;
+    transform: translateY(0);
 }
 
-/* 4. Bagian Hero */
-.hero {
-    text-align: center;
-    padding: 6rem 1.5rem;
+.section:hover {
+    box-shadow: var(--card-hover-shadow);
 }
 
-.hero h1 {
-    letter-spacing: -0.02em; /* Sentuhan Apple */
-}
-
-.hero .hero-subtext {
-    font-size: 1.25rem;
-    color: var(--color-text-secondary);
-    max-width: 600px;
-    margin: 1.5rem auto 2.5rem auto;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--color-accent);
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px; /* Pill shape */
-    font-weight: 500;
-    transition: var(--transition-main);
-    font-size: 1rem;
+    margin-top: 1rem;
 }
 
-.cta-button:hover {
-    background-color: #fff;
-    color: var(--color-background);
-    opacity: 1;
-    transform: scale(1.05);
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--outline-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
-/* 5. Bagian Tentang Saya */
-.about-content {
-    max-width: 700px;
-    margin: 0 auto;
+.job-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #999;
+}
+
+/* Link */
+.project-link, .certificate-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.project-link:hover, .certificate-link:hover {
+    color: #fff;
+}
+
+/* Profile Section */
+.profile-header-content {
     text-align: center;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 0;
 }
 
-/* 6. Bagian Portofolio */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background-color: var(--color-surface);
-    border-radius: var(--border-radius-main);
-    overflow: hidden;
-    transition: var(--transition-main);
-    border: 1px solid rgba(255, 255, 255, 0.05); /* Batas halus */
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    opacity: 1;
-}
-
-.project-card img {
-    width: 100%;
-    height: 220px;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--profile-glow);
+    margin-bottom: 1rem;
 }
 
-.project-card .card-content {
-    padding: 1.5rem;
+/* Contact List */
+.contact-list-vertical {
+    display: block;
 }
 
-.project-card .category {
-    font-size: 0.85rem;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.contact-item:hover {
+    color: var(--primary-color);
+}
+
+.contact-icon {
+    display: inline-block;
+    width: 2rem;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    background-color: transparent;
+    border: 1px solid var(--outline-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     font-weight: 500;
-    color: var(--color-accent);
+    transition: background-color 0.3s;
+}
+
+.skills-list li:hover {
+    background-color: rgba(0, 191, 255, 0.2);
+}
+
+/* Projects and Certificates Grid */
+.projects-grid, .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card, .certificate-item {
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--outline-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover, .certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.project-card h3, .certificate-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
-.project-card h3 {
-    color: var(--color-text-primary);
+.certificate-item .issuer, .certificate-item .date {
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.project-card p {
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 0;
+.certificate-item .date {
+    margin-bottom: 1rem;
 }
 
-/* 7. Bagian Footer */
-footer {
+/* Footer */
+.footer {
     text-align: center;
-    border-top: 1px solid var(--color-surface);
-    margin-top: 4rem;
-    padding-top: 4rem;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #888;
 }
 
-footer h2 {
-    font-size: 2rem;
+/* ===== PENGATURAN RESPONSIVE (MOBILE) ===== */
+
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        width: 90%; /* Memastikan padding di mobile */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        position: absolute;
+        top: var(--nav-height);
+        left: -100%; /* Sembunyi di luar layar */
+        opacity: 1;
+        transition: all 0.5s ease;
+        background: #0a111a; /* Background solid saat menu mobile terbuka */
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Pindahkan ke layar */
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        display: table;
+        border-bottom: 1px solid var(--outline-color);
+    }
+    
+    .nav-link:hover {
+        border-bottom: 1px solid var(--outline-color);
+        color: var(--primary-color);
+    }
+    
+    .nav-link.active {
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    .menu-icon {
+        display: block; /* Tampilkan ikon hamburger */
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+    }
+    
+    .menu-icon.is-active .fa-bars {
+        /* (Opsional) Animasi ganti ikon, untuk sekarang kita biarkan */
+    }
 }
 
-footer p {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-}
+@media screen and (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
 
-footer .contact-link {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--color-text-primary);
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-footer .contact-link:hover {
-    color: var(--color-accent);
-    opacity: 1;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.social-links a {
-    color: var(--color-text-secondary);
-    font-weight: 500;
-}
-
-.social-links a:hover {
-    color: var(--color-accent);
-    opacity: 1;
-}
-
-.copyright {
-    font-size: 0.85rem;
-    color: #6e6e73; /* Abu-abu legal Apple */
-    margin-bottom: 0;
-}
-
-/* 8. Animasi Reveal (untuk JS) */
-.reveal-fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.reveal-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
+    .section {
+        padding: 1.5rem; /* Kurangi padding section di mobile */
+    }
+    
+    .projects-grid, .certificates-grid {
+        grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
+    }
 }

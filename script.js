@@ -1,32 +1,60 @@
-// FILE: script.js
-
+// Kode Intersection Observer Anda yang sudah ada
 document.addEventListener('DOMContentLoaded', () => {
-
-    // 1. Smooth scrolling untuk link navigasi (jika Anda ingin menambahkannya)
-    // (Saat ini CSS 'scroll-behavior: smooth' sudah menanganinya,
-    // tapi ini adalah cara JS jika diperlukan)
-
-    // 2. Animasi Intersection Observer untuk 'reveal-fade'
-    const revealElements = document.querySelectorAll('.reveal-fade');
-
-    const observerOptions = {
-        root: null, // relatif terhadap viewport
-        rootMargin: '0px',
-        threshold: 0.1 // 10% dari elemen harus terlihat
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    const fadeInOnScroll = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Berhenti mengamati setelah terlihat
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    };
 
-    // Amati setiap elemen
-    revealElements.forEach(el => {
-        revealObserver.observe(el);
+    const observer = new IntersectionObserver(fadeInOnScroll, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
     });
 
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // ===== KODE BARU UNTUK HIGHLIGHT NAVBAR =====
+    const navLinks = document.querySelectorAll('.nav-link');
+    const allSections = document.querySelectorAll('.section');
+
+    const highlightNav = (entries, scrollObserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Dapatkan ID dari section yang terlihat (cth: "about")
+                const id = entry.target.getAttribute('id');
+                
+                // Hapus kelas 'active' dari semua link
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Temukan link yang sesuai (cth: href="#about") dan tambahkan 'active'
+                const activeLink = document.querySelector(.nav-link[href="#${id}"]);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    };
+
+    const scrollObserver = new IntersectionObserver(highlightNav, {
+        root: null,
+        rootMargin: '-80% 0px -40% 0px', // Aktif saat section berada di tengah layar
+        threshold: 0
+    });
+
+    allSections.forEach(section => {
+        // Jangan amati section profile untuk highlight
+        if (section.id !== 'profile') {
+            scrollObserver.observe(section);
+        }
+    });
+    // ===== AKHIR KODE BARU =====
 });

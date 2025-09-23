@@ -1,52 +1,87 @@
 <?php
 
-// FILE: data.php
-// Cukup ubah data di bawah ini untuk memperbarui website Anda.
-
-$data = [
-    // Informasi Pribadi & Header
-    'personal' => [
-        'name' => 'Nama Anda',
-        'tagline' => 'Product Designer & Front-end Developer',
-        'email' => 'emailanda@example.com',
-        'linkedin' => 'https://linkedin.com/in/usernameanda', // Ganti dengan URL LinkedIn Anda
-        'github' => 'https://github.com/usernameanda',     // Ganti dengan URL GitHub Anda
-    ],
-
-    // Teks di bagian "Tentang Saya"
-    'about' => [
-        'title' => 'Thinking differently.',
-        'description' => 'Saya adalah seorang desainer dan developer dengan fokus pada penciptaan pengalaman pengguna yang intuitif, elegan, dan bermakna. Saya percaya pada kekuatan desain minimalis untuk menyelesaikan masalah kompleks. Saya terobsesi dengan detail kecil dan performa yang mulus.',
-    ],
-
-    // Daftar Proyek Portofolio Anda
-    'projects' => [
-        [
-            'title' => 'Project Alpha',
-            'category' => 'UI/UX Design & Development',
-            'description' => 'Mendesain ulang aplikasi mobile banking untuk meningkatkan retensi pengguna sebesar 20%.',
-            'image_url' => 'https://images.unsplash.com/photo-1559028006-44d08f33588f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80', // Ganti dengan URL gambar Anda
-            'link' => '#' // Ganti dengan link ke proyek Anda
-        ],
-        [
-            'title' => 'Project Beta',
-            'category' => 'Web Application',
-            'description' => 'Membangun dashboard analitik interaktif menggunakan React dan D3.js.',
-            'image_url' => 'https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80', // Ganti dengan URL gambar Anda
-            'link' => '#' // Ganti dengan link ke proyek Anda
-        ],
-        [
-            'title' => 'Project Gamma',
-            'category' => 'Branding & Identity',
-            'description' => 'Menciptakan identitas visual yang kohesif untuk startup teknologi yang berfokus pada AI.',
-            'image_url' => 'https://images.unsplash.com/photo-1629904853716-f0bc642191e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', // Ganti dengan URL gambar Anda
-            'link' => '#' // Ganti dengan link ke proyek Anda
-        ],
-    ],
+// Personal profile information
+$profile = [
+    'name' => 'Christopher Ivander Dicky Prayudhi',
+    'job_title' => 'Information Systems Specialist',
+    'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
+    'profile_pic' => 'https://cdn.momoi.cc/uploads/2025-09-22_3ebd46b279/2025-09-22_ac7dfbf0cd.jpg'
 ];
 
-// Fungsi helper untuk keamanan (mencegah XSS)
-// Selalu gunakan ini saat mencetak data ke HTML
-function e($string) {
-    return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
-}
+// List of skills
+$skills = [
+    'Systems Analysis',
+    'Database Management (SQL, NoSQL)',
+    'Data Modeling',
+    'Business Process Management',
+    'Project Management',
+    'Cloud Computing (AWS/Azure)',
+    'UI/UX Design',
+    'Programming (Python, PHP, JavaScript)',
+    'Cybersecurity Principles'
+];
+
+// List of projects
+$projects = [
+    [
+        'title' => 'E-Commerce Analytics Dashboard',
+        'description' => 'Developed a real-time dashboard to monitor sales, customer behavior, and inventory using Python and a MySQL database.',
+        'link' => 'https://github.com/chris-ivander/ecommerce-dashboard'
+    ],
+    [
+        'title' => 'Automated HR System',
+        'description' => 'Designed and implemented an automated system for employee onboarding and payroll, reducing manual tasks by 40%.',
+        'link' => 'https://github.com/chris-ivander/hr-system'
+    ],
+    [
+        'title' => 'Academic Information Portal',
+        'description' => 'Created a secure web portal for students to access grades and class schedules, improving information accessibility.',
+        'link' => 'https://github.com/chris-ivander/academic-portal'
+    ]
+];
+
+// Contact information with links
+$contact = [
+    [
+        'icon' => 'fas fa-envelope',
+        'text' => 'christopherivanderp@gmail.com',
+        'link' => 'mailto:christopherivanderp@gmail.com'
+    ],
+    [
+        'icon' => 'fab fa-linkedin',
+        'text' => 'LinkedIn',
+        'link' => 'https://www.linkedin.com/in/christopher-ivander-dicky-prayudhi-36b948293/'
+    ],
+    [
+        'icon' => 'fab fa-github',
+        'text' => 'GitHub',
+        'link' => 'https://github.com/Kriterr'
+    ],
+    [
+        'icon' => 'fas fa-phone',
+        'text' => '+62 812 8543 6662',
+        'link' => 'tel:+6281285436662'
+    ]
+];
+
+// List of certificates
+$certificates = [
+    [
+        'title' => 'AWS Certified Cloud Practitioner',
+        'issuer' => 'Amazon Web Services (AWS)',
+        'date' => 'Issued May 2024',
+        'link' => 'https://www.aws.org/credential/link'
+    ],
+    [
+        'title' => 'Google Project Management',
+        'issuer' => 'Coursera',
+        'date' => 'Issued March 2024',
+        'link' => 'https://www.coursera.org/credential/link'
+    ],
+    [
+        'title' => 'Certified ScrumMaster (CSM)',
+        'issuer' => 'Scrum Alliance',
+        'date' => 'Issued January 2024',
+        'link' => 'https://www.scrumalliance.org/credential/link'
+    ]
+];
