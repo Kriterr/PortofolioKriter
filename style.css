@@ -28,27 +28,15 @@ body {
     min-height: 100vh;
     padding-top: var(--nav-height); /* Hanya sisakan padding-top untuk navbar */
     overflow-x: hidden;
-}
 
-/* ===== PARTICLES.JS BACKGROUND BARU ===== */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Penting: agar di belakang konten */
-    
-    /* PROPERTI BACKGROUND DIPINDAHKAN KE SINI */
+    /* Background ada di sini */
     background-color: var(--background-color-dark);
-    /* Saya tambahkan overlay gelap agar particles lebih terlihat */
     background-image: linear-gradient(rgba(10, 17, 26, 0.9), rgba(10, 17, 26, 0.9)), 
                       url('assets/backgroundimage.jpg'); /* Pastikan path ini benar! */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-
 
 /* ===== NAVBAR ===== */
 .navbar {
@@ -342,6 +330,7 @@ h2 {
     
     .nav-link.active {
         border-bottom: 1px solid var(--primary-color);
+style.css
     }
 
     .menu-icon {

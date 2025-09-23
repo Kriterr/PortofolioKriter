@@ -14,8 +14,6 @@ require_once 'data.php';
 </head>
 <body>
 
-    <div id="particles-js"></div>
-
     <nav class="navbar">
         <div class="navbar-container">
             
@@ -112,8 +110,6 @@ require_once 'data.php';
             <p>&copy; <?php echo date("Y"); ?> Christopher Ivander Dicky Prayudhi. All Rights Reserved.</p>
         </footer>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
         <script src="script.js"></script>
 </body>
