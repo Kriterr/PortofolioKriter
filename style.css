@@ -24,7 +24,6 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    /* PROPERTI BACKGROUND DIHAPUS DARI SINI */
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     padding-top: var(--nav-height); /* Hanya sisakan padding-top untuk navbar */
@@ -44,7 +43,7 @@ body {
     background-color: var(--background-color-dark);
     /* Saya tambahkan overlay gelap agar particles lebih terlihat */
     background-image: linear-gradient(rgba(10, 17, 26, 0.9), rgba(10, 17, 26, 0.9)), 
-                      url('assets/backgroundimage.jpg');
+                      url('assets/backgroundimage.jpg'); /* Pastikan path ini benar! */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -71,15 +70,13 @@ body {
 
 .navbar-container {
     display: flex;
-    justify-content: flex-end; /* DIPERBAIKI: Mendorong menu ke kanan */
+    justify-content: flex-end; /* Mendorong menu ke kanan */
     align-items: center;
     height: var(--nav-height);
     width: 90%; 
     max-width: 900px; 
     margin: 0 auto; 
 }
-
-/* .nav-logo tidak terpakai di HTML Anda, jadi saya hapus */
 
 .nav-menu {
     display: flex;
