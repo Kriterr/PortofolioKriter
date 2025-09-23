@@ -1,11 +1,11 @@
 /* ===== PENGATURAN GLOBAL & VARIABEL ===== */
 :root {
-    --primary-color: #00BFFF;
+    --primary-color: #007aff;
     --text-color: #e0e6ed;
     --outline-color: rgba(255, 255, 255, 0.2);
     --background-color-dark: #111111;
-    --card-hover-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
-    --profile-glow: 0 0 15px var(--primary-color);
+    --card-hover-shadow: 0 8px 30px rgba(0, 122, 255, 0.2); 
+    --profile-glow: 0 0 25px rgba(0, 122, 255, 0.4); 
     --nav-height: 70px;
 }
 
