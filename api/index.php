@@ -9,40 +9,15 @@ require_once 'data.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $profile['name']; ?> - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#profile" class="nav-logo">Home</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#certificates" class="nav-link">Certificates</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <div class="main-container">
-        <section id="profile" class="section">
-            <div class="profile-header-content">
-                <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
-                <h1><?php echo $profile['name']; ?></h1>
-                <p class="job-title"><?php echo $profile['job_title']; ?></p>
-            </div>
+        <section id="profile" class="section profile-section">
+            <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
+            <h1><?php echo $profile['name']; ?></h1>
+            <p class="job-title"><?php echo $profile['job_title']; ?></p>
         </section>
 
         <section id="about" class="section">
@@ -52,11 +27,11 @@ require_once 'data.php';
 
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <div class="contact-list-vertical">
+            <div class="contact-grid">
                 <?php foreach ($contact as $item) : ?>
                     <a href="<?php echo $item['link']; ?>" target="_blank" class="contact-item">
-                        <div class="contact-icon"><i class="<?php echo $item['icon']; ?>"></i></div>
-                        <span class="contact-text"><?php echo $item['text']; ?></span>
+                        <i class="<?php echo $item['icon']; ?>"></i>
+                        <span><?php echo $item['text']; ?></span>
                     </a>
                 <?php endforeach; ?>
             </div>
