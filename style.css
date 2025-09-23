@@ -55,13 +55,12 @@ body {
 
 .navbar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Ini mendorong menu ke kanan */
     align-items: center;
     height: var(--nav-height);
-    width: 90%; /* Dibuat 90% untuk padding mobile */
-    max-width: 900px; /* DISAMAKAN dengan .main-container */
-    margin: 0 auto; /* Otomatis di tengah */
-    /* padding: 0 2rem; Dihapus, diganti 'width' dan 'margin' */
+    width: 90%; 
+    max-width: 900px; 
+    margin: 0 auto; 
 }
 
 .nav-logo {
