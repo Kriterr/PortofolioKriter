@@ -1,106 +1,75 @@
 <?php
-// Load data from data.php
-require_once 'data.php';
+// Memasukkan data portofolio
+include 'data.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $profile['name']; ?> - Portfolio</title>
+    <title>Portofolio - Desain Apple</title>
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-container">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#profile" class="nav-link">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Project</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#certificates" class="nav-link">Certificate</a>
-                </li>
-                </ul>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo"></div>
+            <nav>
+                <a href="#">Store</a>
+                <a href="#">Mac</a>
+                <a href="#">iPad</a>
+                <a href="#">iPhone</a>
+                <a href="#">Watch</a>
+                <a href="#">Vision</a>
+            </nav>
+            <div class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </div>
         </div>
-    </nav>
-    <div class="main-container">
-        <section id="profile" class="section">
-            <div class="profile-header-content">
-                <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
-                <h1><?php echo $profile['name']; ?></h1>
-                <p class="job-title"><?php echo $profile['job_title']; ?></p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Inovasi dalam Portofolio.</h1>
+                <p>Lihat proyek terbaru yang dirancang dengan presisi dan kreativitas.</p>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p><?php echo $profile['bio']; ?></p>
-        </section>
+        <section id="portfolio" class="portfolio-grid">
+            <div class="container">
+                <h2>Proyek Unggulan</h2>
+                <div class="grid">
+                    
+                    <?php foreach ($portfolio_items as $item): ?>
+                        <div class="card">
+                            <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <div class="card-content">
+                                <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                                <p><?php echo htmlspecialchars($item['description']); ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-list-vertical">
-                <?php foreach ($contact as $item) : ?>
-                    <a href="<?php echo $item['link']; ?>" target="_blank" class="contact-item">
-                        <div class="contact-icon"><i class="<?php echo $item['icon']; ?>"></i></div>
-                        <span class="contact-text"><?php echo $item['text']; ?></span>
-                    </a>
-                <?php endforeach; ?>
+                </div>
             </div>
         </section>
+    </main>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <?php foreach ($skills as $skill) : ?>
-                    <li><?php echo $skill; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </section>
+    <footer class="footer">
+        <div class="container">
+            <p>Hak Cipta © <?php echo date("Y"); ?> Apple Inc. Semua hak cipta dilindungi undang-undang.</p>
+        </div>
+    </footer>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <?php foreach ($projects as $project) : ?>
-                    <div class="project-card">
-                        <h3><?php echo $project['title']; ?></h3>
-                        <p><?php echo $project['description']; ?></p>
-                        <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </section>
-
-        <section id="certificates" class="section">
-            <h2>Certificates</h2>
-            <div class="certificates-grid">
-                <?php foreach ($certificates as $certificate) : ?>
-                    <div class="certificate-item">
-                        <h3><?php echo $certificate['title']; ?></h3>
-                        <p class="issuer"><?php echo $certificate['issuer']; ?></p>
-                        <p class="date"><?php echo $certificate['date']; ?></p>
-                        <a href="<?php echo $certificate['link']; ?>" target="_blank" class="certificate-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>&copy; <?php echo date("Y"); ?> Christopher Ivander Dicky Prayudhi. All Rights Reserved.</p>
-        </footer>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
