@@ -1,36 +1,32 @@
-// script.js
+// FILE: script.js
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Gunakan Intersection Observer untuk animasi fade-in saat scroll
-    const cards = document.querySelectorAll('.card');
+    // 1. Smooth scrolling untuk link navigasi (jika Anda ingin menambahkannya)
+    // (Saat ini CSS 'scroll-behavior: smooth' sudah menanganinya,
+    // tapi ini adalah cara JS jika diperlukan)
+
+    // 2. Animasi Intersection Observer untuk 'reveal-fade'
+    const revealElements = document.querySelectorAll('.reveal-fade');
 
     const observerOptions = {
-        root: null, // relative to the viewport
+        root: null, // relatif terhadap viewport
         rootMargin: '0px',
-        threshold: 0.1 // 10% dari kartu harus terlihat
+        threshold: 0.1 // 10% dari elemen harus terlihat
     };
 
-    const observerCallback = (entries, observer) => {
-        entries.forEach((entry, index) => {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Tambahkan delay kecil untuk efek staggered (muncul satu per satu)
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100); // delay 100ms per kartu
-                
-                // Berhenti mengamati kartu ini setelah animasinya jalan
-                observer.unobserve(entry.target);
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Berhenti mengamati setelah terlihat
             }
         });
-    };
+    }, observerOptions);
 
-    const cardObserver = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Amati setiap kartu
-    cards.forEach(card => {
-        cardObserver.observe(card);
+    // Amati setiap elemen
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
     });
 
-    console.log('Portfolio script loaded. Observing portfolio cards.');
 });

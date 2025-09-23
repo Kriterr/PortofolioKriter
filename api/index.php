@@ -1,73 +1,71 @@
 <?php
-// Memasukkan data portofolio
-include 'data.php';
+// FILE: index.php
+require_once 'data.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Desain Apple</title>
-    
+    <title><?php echo e($data['personal']['name']); ?> | <?php echo e($data['personal']['tagline']); ?></title>
+    <meta name="description" content="<?php echo e($data['about']['description']); ?>">
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <div class="logo"></div>
-            <nav>
-                <a href="#">Store</a>
-                <a href="#">Mac</a>
-                <a href="#">iPad</a>
-                <a href="#">iPhone</a>
-                <a href="#">Watch</a>
-                <a href="#">Vision</a>
-            </nav>
-            <div class="search-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-            </div>
-        </div>
+    <header class="container">
+        <nav>
+            <div class="logo"><?php echo e($data['personal']['name']); ?></div>
+            <ul>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Inovasi dalam Portofolio.</h1>
-                <p>Lihat proyek terbaru yang dirancang dengan presisi dan kreativitas.</p>
+        <section class="hero container reveal-fade">
+            <h1><?php echo e($data['personal']['tagline']); ?></h1>
+            <p class="hero-subtext">Berbasis di Jakarta, Indonesia. Menciptakan karya yang luar biasa sederhana dan sangat fungsional.</p>
+            <a href="mailto:<?php echo e($data['personal']['email']); ?>" class="cta-button">Hubungi Saya</a>
+        </section>
+
+        <section id="about" class="container reveal-fade">
+            <div class="section-content about-content">
+                <h2><?php echo e($data['about']['title']); ?></h2>
+                <p><?php echo e($data['about']['description']); ?></p>
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio-grid">
-            <div class="container">
-                <h2>Proyek Unggulan</h2>
-                <div class="grid">
-                    
-                    <?php foreach ($portfolio_items as $item): ?>
-                        <div class="card">
-                            <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
-                            <div class="card-content">
-                                <h3><?php echo htmlspecialchars($item['title']); ?></h3>
-                                <p><?php echo htmlspecialchars($item['description']); ?></p>
-                            </div>
+        <section id="portfolio" class="container reveal-fade">
+            <h2>Karya Pilihan</h2>
+            <div class="portfolio-grid">
+                <?php foreach ($data['projects'] as $project): ?>
+                    <a href="<?php echo e($project['link']); ?>" class="project-card reveal-fade" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo e($project['image_url']); ?>" alt="<?php echo e($project['title']); ?>">
+                        <div class="card-content">
+                            <h3><?php echo e($project['title']); ?></h3>
+                            <p class="category"><?php echo e($project['category']); ?></p>
+                            <p><?php echo e($project['description']); ?></p>
                         </div>
-                    <?php endforeach; ?>
-
-                </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>Hak Cipta © <?php echo date("Y"); ?> Apple Inc. Semua hak cipta dilindungi undang-undang.</p>
+    <footer id="contact" class="container reveal-fade">
+        <h2>Tertarik bekerja sama?</h2>
+        <p>Ayo bicara.</p>
+        <a href="mailto:<?php echo e($data['personal']['email']); ?>" class="contact-link"><?php echo e($data['personal']['email']); ?></a>
+        <div class="social-links">
+            <a href="<?php echo e($data['personal']['linkedin']); ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="<?php echo e($data['personal']['github']); ?>" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
+        <p class="copyright">&copy; <?php echo date('Y'); ?> <?php echo e($data['personal']['name']); ?>. Didesain dengan penuh ketelitian.</p>
     </footer>
 
     <script src="script.js"></script>
