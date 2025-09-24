@@ -24,9 +24,9 @@ $skills = [
 // List of projects
 $projects = [
     [
-        'title' => 'E-Commerce Analytics Dashboard',
-        'description' => 'Developed a real-time dashboard to monitor sales, customer behavior, and inventory using Python and a MySQL database.',
-        'link' => 'https://github.com/chris-ivander/ecommerce-dashboard'
+        'title' => 'Tanify: UI/UX Design for a Smart Farming App',
+        'description' => 'An application for Indonesian farmers, providing data-driven insights on market prices, weather, and fertilizer to simplify complex agricultural information and help improve decisions.',
+        'link' => 'https://drive.google.com/drive/folders/1Swgg1rAE9XD0YuqcBS63cQUOmlZotyUK?usp=sharing'
     ],
     [
         'title' => 'Automated HR System',
