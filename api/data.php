@@ -11,14 +11,15 @@ $profile = [
 // List of skills
 $skills = [
     'Systems Analysis',
-    'Database Management (SQL, NoSQL)',
-    'Data Modeling',
+    'Business Analysis',
+    'AI Workflow Integration',
     'Business Process Management',
     'Project Management',
-    'Cloud Computing (AWS/Azure)',
-    'UI/UX Design',
-    'Programming (Python, PHP, JavaScript)',
-    'Cybersecurity Principles'
+    'Leadership',
+    'UI/UX Design(Figma)',
+    'Java',
+    'System Architecture',
+    'Team Collaboration'
 ];
 
 // List of projects
@@ -34,8 +35,8 @@ $projects = [
         'link' => 'https://github.com/chris-ivander/hr-system'
     ],
     [
-        'title' => 'Academic Information Portal',
-        'description' => 'Created a secure web portal for students to access grades and class schedules, improving information accessibility.',
+        'title' => 'Drug Awareness Education Program',
+        'description' => 'An educational program to inform high school students about substance abuse risks. It used interactive sessions to build critical thinking and promote a resilient, drug-free lifestyle.',
         'link' => 'https://github.com/chris-ivander/academic-portal'
     ]
 ];
@@ -67,21 +68,21 @@ $contact = [
 // List of certificates
 $certificates = [
     [
-        'title' => 'AWS Certified Cloud Practitioner',
-        'issuer' => 'Amazon Web Services (AWS)',
-        'date' => 'Issued May 2024',
-        'link' => 'https://www.aws.org/credential/link'
+        'title' => 'English Certificate – EF Standard English Test (EF SET)',
+        'issuer' => 'English First',
+        'date' => 'Issued Sep 2025',
+        'link' => 'https://drive.google.com/file/d/1Ck-KgXR5Rw58zgCmf8fQP97sr2qUz5DJ/view?usp=sharing'
     ],
     [
-        'title' => 'Google Project Management',
-        'issuer' => 'Coursera',
-        'date' => 'Issued March 2024',
-        'link' => 'https://www.coursera.org/credential/link'
+        'title' => 'Beelingua Language Proficiency Certificate ',
+        'issuer' => 'Binus University',
+        'date' => 'Issued Nov 2023',
+        'link' => 'https://drive.google.com/drive/folders/1QRAaWl_F3XoomvrXhF-CHwOxSHpn7MgF?usp=sharing'
     ],
     [
-        'title' => 'Certified ScrumMaster (CSM)',
-        'issuer' => 'Scrum Alliance',
-        'date' => 'Issued January 2024',
-        'link' => 'https://www.scrumalliance.org/credential/link'
+        'title' => 'Techfest UI/UX Design Certificate',
+        'issuer' => 'HIMTI Binus Universtiy',
+        'date' => 'Issued September 2025',
+        'link' => 'https://drive.google.com/file/d/18DlvN-hfyUz6VQQNY4dAAO_t1FI65SPC/view?usp=sharing'
     ]
 ];
