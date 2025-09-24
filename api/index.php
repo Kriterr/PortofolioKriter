@@ -45,17 +45,16 @@ require_once 'data.php';
     </nav>
     <div class="main-container">
         <section id="profile" class="section">
-            <div class="profile-header-content">
-                <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
-                <h1><?php echo $profile['name']; ?></h1>
-                <p class="job-title"><?php echo $profile['job_title']; ?></p>
-                <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" download>
+    <div class="profile-header-content">
+        <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
+        <h1><?php echo $profile['name']; ?></h1>
+        <p class="job-title"><?php echo $profile['job_title']; ?></p>
+        
+        <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" download>
             <i class="fas fa-download"></i> Download CV
         </a>
         </div>
 </section>
-            </div>
-        </section>
 
         <section id="about" class="section">
             <h2>About Me</h2>
