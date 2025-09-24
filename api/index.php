@@ -53,7 +53,8 @@ require_once 'data.php';
         <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" download>
             <i class="fas fa-download"></i> Download CV
         </a>
-        </div>
+        
+    </div>
 </section>
 
         <section id="about" class="section">
