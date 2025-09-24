@@ -367,32 +367,28 @@ h2 {
 /* =================================
    NEW CV Download Button (Upgrade)
    ================================= */
+/* OPSI 1: DESAIN MODERN & SOLID */
 .cv-download-btn {
-    display: inline-block;
-    padding: 14px 28px;
-    margin-top: 25px;
+    display: inline-flex; /* Menggunakan flexbox untuk alignment icon dan teks */
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+    margin-top: 24px;
+    padding: 12px 24px;
+    background-color: #007BFF; /* Warna biru profesional */
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #ffffff;
-    background: linear-gradient(90deg, #4F46E5, #818CF8); /* Gradient yang elegan */
-    border: none;
-    border-radius: 12px; /* Sudut yang sedikit lebih tegas */
     text-decoration: none;
+    border: none; /* Menghilangkan border */
+    border-radius: 8px; /* Sudut lebih membulat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
     cursor: pointer;
-    transition: all 0.3s ease-out; /* Transisi lebih halus */
-    box-shadow: 0 5px 15px rgba(94, 106, 227, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi lebih halus */
 }
 
 .cv-download-btn:hover {
-    transform: translateY(-4px) scale(1.02); /* Efek terangkat dan sedikit membesar */
-    box-shadow: 0 8px 25px rgba(94, 106, 227, 0.4);
-    background: linear-gradient(90deg, #4338CA, #6366F1); /* Warna gradient sedikit berubah */
-}
-
-/* Mengatur ikon di dalam tombol */
-.cv-download-btn i {
-    margin-right: 10px;
-    font-size: 15px;
-}
+    background-color: #0056b3; /* Warna menjadi sedikit lebih gelap saat disentuh kursor */
+    transform: translateY(-2px); /* Tombol sedikit terangkat */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }

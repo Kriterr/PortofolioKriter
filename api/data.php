@@ -17,7 +17,8 @@ $skills = [
     'Business Process Management',
     'Project Management',
     'Leadership',
-    'UI/UX Design(Figma)',
+    'UI/UX Design',
+    'Figma',
     'Java',
     'System Architecture',
     'Team Collaboration'
