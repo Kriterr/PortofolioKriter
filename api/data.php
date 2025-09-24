@@ -4,8 +4,11 @@
 $profile = [
     'name' => 'Christopher Ivander Dicky Prayudhi',
     'job_title' => 'Information Systems Specialist',
-    'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
+    'bio' => 'As a graduate of Business Information Technology from Bina Nusantara University, I specialize in bridging the gap between business objectives and technological solutions. My core passion lies in designing efficient, user-centric systems that not only solve problems but also drive growth.
+
+In my daily workflow, I actively leverage Artificial Intelligence to automate complex tasks, uncover data-driven insights, and enhance productivity. I am a firm believer in continuous improvement, constantly adapting to the ever-evolving tech landscape to ensure the solutions I deliver are not just effective today, but are also ready for the challenges of tomorrow.',
     'profile_pic' => 'https://cdn.momoi.cc/uploads/2025-09-22_3ebd46b279/2025-09-22_ac7dfbf0cd.jpg'
+    'cv_link' => 'assets/Christopher_Ivander_CV.pdf'
 ];
 
 // List of skills

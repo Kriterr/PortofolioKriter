@@ -361,4 +361,32 @@ h2 {
     .projects-grid, .certificates-grid {
         grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
     }
+    /* =================
+   CV Download Button
+   ================= */
+.cv-download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background-color: #007bff; /* Warna biru primer yang modern */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    border-radius: 50px; /* Membuat bentuk pil yang modern */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.cv-download-btn:hover {
+    background-color: #0056b3; /* Warna menjadi lebih gelap saat disentuh */
+    transform: translateY(-3px); /* Memberi efek sedikit terangkat */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.cv-download-btn i {
+    margin-right: 8px; /* Memberi jarak antara ikon dan teks */
+}
 }
