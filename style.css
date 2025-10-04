@@ -361,13 +361,7 @@ h2 {
     .projects-grid, .certificates-grid {
         grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
     }
-    /* =================
-   CV Download Button
-   ================= */
-/* =================================
-   NEW CV Download Button (Upgrade)
-   ================================= */
-/* OPSI 1: DESAIN MODERN & SOLID */
+    
 .cv-download-btn {
     display: inline-flex; /* Menggunakan flexbox untuk alignment icon dan teks */
     align-items: center;
