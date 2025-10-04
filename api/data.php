@@ -5,7 +5,7 @@ $profile = [
     'name' => 'Christopher Ivander Dicky Prayudhi',
     'job_title' => 'Information Systems Specialist',
     'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
-    'profile_pic' => 'https://cdn.momoi.cc/uploads/2025-10-04_41a8668388/2025-10-04_b1b8563b80.png',
+    'profile_pic' => 'https://cdn.momoi.cc/uploads/2025-10-04_ebe0a723ee/2025-10-04_3df723dcf5.png',
     'cv_link' => 'assets/Christopher_Ivander_CV.pdf' // <-- ADD THIS LINE (Update with your CV path)
 ];
 
