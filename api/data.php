@@ -28,7 +28,7 @@ $skills = [
 // List of projects with images
 $projects = [
     [
-        'title' => 'Business Case Analysis: blu by BCA Digital's Tech-Driven Marketing Strategy',
+        'title' => "Business Case Analysis: blu by BCA Digital's Tech-Driven Marketing Strategy",
         'description' => 'Marketing Strategy for blu by BCA A strategic framework developed for a national business case competition to enhance customer loyalty for a leading digital bank.',
         'link' => 'https://drive.google.com/drive/folders/15P5DafLwwpAf11G05_YHT7g3MWQdtTWz?usp=sharing', 
         'image' => 'https://i.imgur.com/example-project-1.png' // <-- ADDED: Replace with your project image URL
