@@ -14,7 +14,7 @@ $skills = [
     ['name' => 'Systems Analysis', 'icon' => 'fas fa-search-plus'],
     ['name' => 'Business Analysis', 'icon' => 'fas fa-briefcase'],
     ['name' => 'AI Integration', 'icon' => 'fas fa-robot'],
-    ['name' => 'BPM', 'icon' => 'fas fa-cogs'], // Business Process Management
+    ['name' => 'Business Process Management', 'icon' => 'fas fa-cogs'], // Business Process Management
     ['name' => 'Project Management', 'icon' => 'fas fa-tasks'],
     ['name' => 'Leadership', 'icon' => 'fas fa-users'],
     ['name' => 'UI/UX Design', 'icon' => 'fas fa-pencil-ruler'],
