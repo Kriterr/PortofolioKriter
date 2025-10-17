@@ -78,7 +78,7 @@ $certificates = [
         'issuer' => 'English First',
         'date' => 'Issued Sep 2025',
         'link' => 'https://drive.google.com/file/d/1Ck-KgXR5Rw58zgCmf8fQP97sr2qUz5DJ/view?usp=sharing',
-        'image' => 'https://media.licdn.com/dms/document/media/v2/D562DAQFLTMSEGnrmcg/profile-treasury-document-pdf-analyzed/B56Zlshm2XJsAg-/0/1758462375114?e=1761782400&v=beta&t=7YX4tjyZxkhDFjkSN2ThotvWOqblc7LU1WyNWvlnGoM' // <-- ADDED: Replace with your certificate image URL
+        'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_60ef2ea858/2025-10-17_4bc6db0f44.jpg
     ],
     [
         'title' => 'Beelingua Language Certificate',
