@@ -6,7 +6,7 @@ $profile = [
     'job_title' => 'Information Systems Specialist',
     'bio' => 'A dedicated Information Systems professional with a passion for designing and implementing efficient and user-centric solutions. Experienced in data analysis, systems architecture, and business process optimization. I thrive on translating complex requirements into simple and effective technological solutions.',
     'profile_pic' => 'https://cdn.momoi.cc/uploads/2025-10-04_ebe0a723ee/2025-10-04_3df723dcf5.png',
-    'cv_link' => 'assets/Christopher_Ivander_CV.pdf'
+    'cv_link' => 'https://www.canva.com/design/DAG2CYS9TJ0/galUV-1GM-7TEMffPmJKCg/edit?utm_content=DAG2CYS9TJ0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
 ];
 
 // List of skills with icons
