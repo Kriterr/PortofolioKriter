@@ -31,19 +31,19 @@ $projects = [
         'title' => "Business Case Analysis: blu by BCA Digital's Tech-Driven Marketing Strategy",
         'description' => 'Marketing Strategy for blu by BCA A strategic framework developed for a national business case competition to enhance customer loyalty for a leading digital bank.',
         'link' => 'https://drive.google.com/drive/folders/15P5DafLwwpAf11G05_YHT7g3MWQdtTWz?usp=sharing', 
-        'image' => 'https://i.imgur.com/example-project-1.png' // <-- ADDED: Replace with your project image URL
+        'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_24cf4c4a8a/2025-10-17_aba305e574.jpg'
     ],
     [
         'title' => 'Tanify : Smart Agriculture Efficiency',
         'description' => 'A Java and MySQL-based web application to manage a player database for an epic battle arena game.',
         'link' => 'https://www.figma.com/design/VzkhLnzfzhMmiKmvmG5HeH/Tanify?node-id=0-1&t=we0O3IjkV9oJmaFh-1', // Replace with your actual link
-        'image' => 'https://i.imgur.com/example-project-2.png' // <-- ADDED: Replace with your project image URL
+        'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_56d964aa60/2025-10-17_38408f5fa9.png'
     ],
     [
         'title' => 'Drug Awareness Education Program',
         'description' => 'Drug Awareness Socialization An interactive program designed to educate high school students on the risks of substance abuse through simulations and discussions.',
         'link' => 'https://drive.google.com/drive/folders/1fd9V_X26WKWyHXLtbUAMJmeDz3lHLqUR?usp=sharing', // Replace with your actual link
-        'image' => 'https://i.imgur.com/example-project-3.png' // <-- ADDED: Replace with your project image URL
+        'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_494b9b9aa8/2025-10-17_fd331d7b46.jpeg'
     ]
 ];
 
