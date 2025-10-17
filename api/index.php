@@ -35,9 +35,9 @@ require_once 'data.php';
                 <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
                 <h1><?php echo $profile['name']; ?></h1>
                 <p class="job-title"><?php echo $profile['job_title']; ?></p>
-               <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" target="_blank">
-    View CV
-</a>
+                <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
         </section>
 
@@ -79,7 +79,7 @@ require_once 'data.php';
                         <div class="card-content">
                             <h3><?php echo $project['title']; ?></h3>
                             <p><?php echo $project['description']; ?></p>
-                            <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Details <i class="fas fa-external-link-alt"></i></a>
+                            <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Details</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -96,7 +96,7 @@ require_once 'data.php';
                             <h3><?php echo $certificate['title']; ?></h3>
                             <p class="issuer"><?php echo $certificate['issuer']; ?></p>
                             <p class="date"><?php echo $certificate['date']; ?></p>
-                            <a href="<?php echo $certificate['link']; ?>" target="_blank" class="certificate-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                            <a href="<?php echo $certificate['link']; ?>" target="_blank" class="certificate-link">View Details</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
