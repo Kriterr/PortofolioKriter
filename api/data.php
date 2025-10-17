@@ -28,21 +28,21 @@ $skills = [
 // List of projects with images
 $projects = [
     [
-        'title' => 'Management KingsHCut',
-        'description' => 'A Java and MySQL-based web application for managing a barbershop\'s inventory, sales, and financial reports.',
-        'link' => '#', // Replace with your actual link
+        'title' => 'Business Case Analysis: blu by BCA Digital's Tech-Driven Marketing Strategy',
+        'description' => 'Marketing Strategy for blu by BCA A strategic framework developed for a national business case competition to enhance customer loyalty for a leading digital bank.',
+        'link' => 'https://drive.google.com/drive/folders/15P5DafLwwpAf11G05_YHT7g3MWQdtTWz?usp=sharing', 
         'image' => 'https://i.imgur.com/example-project-1.png' // <-- ADDED: Replace with your project image URL
     ],
     [
-        'title' => 'Database Player',
+        'title' => 'Tanify : Smart Agriculture Efficiency',
         'description' => 'A Java and MySQL-based web application to manage a player database for an epic battle arena game.',
-        'link' => '#', // Replace with your actual link
+        'link' => 'https://www.figma.com/design/VzkhLnzfzhMmiKmvmG5HeH/Tanify?node-id=0-1&t=we0O3IjkV9oJmaFh-1', // Replace with your actual link
         'image' => 'https://i.imgur.com/example-project-2.png' // <-- ADDED: Replace with your project image URL
     ],
     [
-        'title' => 'SER AI',
-        'description' => 'A Face Recognition and Emotion AI using real-time detection, built with Python and modern AI libraries.',
-        'link' => '#', // Replace with your actual link
+        'title' => 'Drug Awareness Education Program',
+        'description' => 'Drug Awareness Socialization An interactive program designed to educate high school students on the risks of substance abuse through simulations and discussions.',
+        'link' => 'https://drive.google.com/drive/folders/1fd9V_X26WKWyHXLtbUAMJmeDz3lHLqUR?usp=sharing', // Replace with your actual link
         'image' => 'https://i.imgur.com/example-project-3.png' // <-- ADDED: Replace with your project image URL
     ]
 ];
@@ -78,21 +78,21 @@ $certificates = [
         'issuer' => 'English First',
         'date' => 'Issued Sep 2025',
         'link' => 'https://drive.google.com/file/d/1Ck-KgXR5Rw58zgCmf8fQP97sr2qUz5DJ/view?usp=sharing',
-        'image' => 'https://i.imgur.com/example-cert-1.png' // <-- ADDED: Replace with your certificate image URL
+        'image' => 'https://media.licdn.com/dms/document/media/v2/D562DAQFLTMSEGnrmcg/profile-treasury-document-pdf-analyzed/B56Zlshm2XJsAg-/0/1758462375114?e=1761782400&v=beta&t=7YX4tjyZxkhDFjkSN2ThotvWOqblc7LU1WyNWvlnGoM' // <-- ADDED: Replace with your certificate image URL
     ],
     [
         'title' => 'Beelingua Language Certificate',
         'issuer' => 'Binus University',
         'date' => 'Issued Nov 2023',
         'link' => 'https://drive.google.com/drive/folders/1QRAaWl_F3XoomvrXhF-CHwOxSHpn7MgF?usp=sharing',
-        'image' => 'https://i.imgur.com/example-cert-2.png' // <-- ADDED: Replace with your certificate image URL
+        'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_f7df403315/2025-10-17_4a5c20ab5e.jpg' // <-- ADDED: Replace with your certificate image URL
     ],
     [
-        'title' => 'Certified ScrumMaster (CSM)',
-        'issuer' => 'Scrum Alliance',
-        'date' => 'Issued January 2024',
-        'link' => 'https://www.scrumalliance.org/credential/link',
-        'image' => 'https://i.imgur.com/example-cert-3.png' // <-- ADDED: Replace with your certificate image URL
+        'title' => 'Certificate of Participation in UI/UX Design, TECHFEST 2025',
+        'issuer' => 'HIMTI Binus University',
+        'date' => 'Issued September 2025',
+        'link' => 'https://drive.google.com/file/d/1RYk4pfP8u_KD90pVPgXqdq9xLmT6G4Gm/view?usp=sharing',
+        'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_22c3c4f08a/2025-10-17_3f42b1030b.jpg' // <-- ADDED: Replace with your certificate image URL
     ]
 ];
 
