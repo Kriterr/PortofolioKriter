@@ -14,14 +14,16 @@ $skills = [
     ['name' => 'Systems Analysis', 'icon' => 'fas fa-search-plus'],
     ['name' => 'Business Analysis', 'icon' => 'fas fa-briefcase'],
     ['name' => 'AI Integration', 'icon' => 'fas fa-robot'],
-    ['name' => 'Business Process Management', 'icon' => 'fas fa-cogs'], // Business Process Management
+    ['name' => 'BPM', 'icon' => 'fas fa-cogs'], // Business Process Management
     ['name' => 'Project Management', 'icon' => 'fas fa-tasks'],
     ['name' => 'Leadership', 'icon' => 'fas fa-users'],
     ['name' => 'UI/UX Design', 'icon' => 'fas fa-pencil-ruler'],
     ['name' => 'Figma', 'icon' => 'fab fa-figma'],
     ['name' => 'Java', 'icon' => 'fab fa-java'],
     ['name' => 'System Architecture', 'icon' => 'fas fa-sitemap'],
-    ['name' => 'Team Collaboration', 'icon' => 'fas fa-handshake']
+    ['name' => 'Team Collaboration', 'icon' => 'fas fa-handshake'],
+    ['name' => 'MySQL', 'icon' => 'fas fa-database'], // <-- ADDED
+    ['name' => 'Problem Solving', 'icon' => 'fas fa-puzzle-piece'] // <-- ADDED
 ];
 
 
