@@ -10,12 +10,10 @@ require_once 'data.php';
     <title><?php echo $profile['name']; ?> - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
 </head>
 <body>
 
@@ -25,8 +23,8 @@ require_once 'data.php';
                 <li class="nav-item"><a href="#profile" class="nav-link">About Me</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Project</a></li>
+                <li class="nav-item"><a href="#certificates" class="nav-link">Certificate</a></li>
             </ul>
         </div>
     </nav>
@@ -62,26 +60,26 @@ require_once 'data.php';
 
         <section id="skills" class="section">
             <h2>Skills</h2>
-            <ul class="skills-list">
+            <div class="skills-grid">
                 <?php foreach ($skills as $skill) : ?>
-                    <li class="skill-item">
-                        <img src="<?php echo $skill['logo']; ?>" alt="<?php echo $skill['name']; ?> Logo" class="skill-logo">
+                    <div class="skill-card">
+                        <i class="<?php echo $skill['icon']; ?>"></i>
                         <span><?php echo $skill['name']; ?></span>
-                    </li>
+                    </div>
                 <?php endforeach; ?>
-            </ul>
+            </div>
         </section>
 
         <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="projects-grid">
                 <?php foreach ($projects as $project) : ?>
-                    <div class="card">
-                        <img src="<?php echo $project['image']; ?>" alt="<?php echo $project['title']; ?> Preview" class="card-preview-image">
+                    <div class="project-card">
+                        <img src="<?php echo $project['image']; ?>" alt="Preview for <?php echo $project['title']; ?>" class="card-image">
                         <div class="card-content">
                             <h3><?php echo $project['title']; ?></h3>
                             <p><?php echo $project['description']; ?></p>
-                            <a href="<?php echo $project['link']; ?>" target="_blank" class="card-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                            <a href="<?php echo $project['link']; ?>" target="_blank" class="project-link">View Details <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -92,13 +90,13 @@ require_once 'data.php';
             <h2>Certificates</h2>
             <div class="certificates-grid">
                 <?php foreach ($certificates as $certificate) : ?>
-                    <div class="card">
-                        <img src="<?php echo $certificate['image']; ?>" alt="<?php echo $certificate['title']; ?> Preview" class="card-preview-image">
+                    <div class="certificate-item">
+                        <img src="<?php echo $certificate['image']; ?>" alt="Preview for <?php echo $certificate['title']; ?>" class="card-image">
                         <div class="card-content">
                             <h3><?php echo $certificate['title']; ?></h3>
                             <p class="issuer"><?php echo $certificate['issuer']; ?></p>
                             <p class="date"><?php echo $certificate['date']; ?></p>
-                            <a href="<?php echo $certificate['link']; ?>" target="_blank" class="card-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                            <a href="<?php echo $certificate['link']; ?>" target="_blank" class="certificate-link">View Credential <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 <?php endforeach; ?>

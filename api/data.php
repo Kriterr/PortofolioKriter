@@ -9,73 +9,90 @@ $profile = [
     'cv_link' => 'assets/Christopher_Ivander_CV.pdf'
 ];
 
-// List of skills with logos
+// List of skills with icons
 $skills = [
-    ['name' => 'Systems Analysis', 'logo' => 'https://www.svgrepo.com/show/449490/analytics.svg'],
-    ['name' => 'Business Analysis', 'logo' => 'https://www.svgrepo.com/show/493723/analytics-business.svg'],
-    ['name' => 'AI Workflow', 'logo' => 'https://www.svgrepo.com/show/506822/integration-ai.svg'],
-    ['name' => 'Business Process', 'logo' => 'https://www.svgrepo.com/show/443216/business-process.svg'],
-    ['name' => 'Project Management', 'logo' => 'https://www.svgrepo.com/show/452102/project-management.svg'],
-    ['name' => 'Leadership', 'logo' => 'https://www.svgrepo.com/show/505373/leadership.svg'],
-    ['name' => 'UI/UX Design', 'logo' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/penpot/penpot-original.svg'],
-    ['name' => 'Figma', 'logo' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'],
-    ['name' => 'Java', 'logo' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg'],
-    ['name' => 'System Architecture', 'logo' => 'https://www.svgrepo.com/show/422452/database-network-server.svg'],
-    ['name' => 'Team Collaboration', 'logo' => 'https://www.svgrepo.com/show/493638/collaboration-communication-network.svg']
+    ['name' => 'Systems Analysis', 'icon' => 'fas fa-search-plus'],
+    ['name' => 'Business Analysis', 'icon' => 'fas fa-briefcase'],
+    ['name' => 'AI Integration', 'icon' => 'fas fa-robot'],
+    ['name' => 'BPM', 'icon' => 'fas fa-cogs'], // Business Process Management
+    ['name' => 'Project Management', 'icon' => 'fas fa-tasks'],
+    ['name' => 'Leadership', 'icon' => 'fas fa-users'],
+    ['name' => 'UI/UX Design', 'icon' => 'fas fa-pencil-ruler'],
+    ['name' => 'Figma', 'icon' => 'fab fa-figma'],
+    ['name' => 'Java', 'icon' => 'fab fa-java'],
+    ['name' => 'System Architecture', 'icon' => 'fas fa-sitemap'],
+    ['name' => 'Team Collaboration', 'icon' => 'fas fa-handshake']
 ];
 
-// List of projects with preview images
+
+// List of projects with images
 $projects = [
     [
-        'title' => 'Tanify: UI/UX Design for a Smart Farming App',
-        'description' => 'An application for Indonesian farmers, providing data-driven insights on market prices, weather, and fertilizer to simplify complex agricultural information and help improve decisions.',
-        'link' => 'https://drive.google.com/drive/folders/1Swgg1rAE9XD0YuqcBS63cQUOmlZotyUK?usp=sharing',
-        'image' => 'https://placehold.co/600x400/1a1a1a/56C1FF?text=Tanify+App'
+        'title' => 'Management KingsHCut',
+        'description' => 'A Java and MySQL-based web application for managing a barbershop\'s inventory, sales, and financial reports.',
+        'link' => '#', // Replace with your actual link
+        'image' => 'https://i.imgur.com/example-project-1.png' // <-- ADDED: Replace with your project image URL
     ],
     [
-        'title' => 'Automated HR System',
-        'description' => 'Designed and implemented an automated system for employee onboarding and payroll, reducing manual tasks by 40%.',
-        'link' => 'https://github.com/chris-ivander/hr-system',
-        'image' => 'https://placehold.co/600x400/1a1a1a/56C1FF?text=HR+System'
+        'title' => 'Database Player',
+        'description' => 'A Java and MySQL-based web application to manage a player database for an epic battle arena game.',
+        'link' => '#', // Replace with your actual link
+        'image' => 'https://i.imgur.com/example-project-2.png' // <-- ADDED: Replace with your project image URL
     ],
     [
-        'title' => 'Drug Awareness Education Program',
-        'description' => 'An educational program to inform high school students about substance abuse risks. It used interactive sessions to build critical thinking and promote a resilient, drug-free lifestyle.',
-        'link' => 'https://github.com/chris-ivander/academic-portal',
-        'image' => 'https://placehold.co/600x400/1a1a1a/56C1FF?text=Awareness+Program'
+        'title' => 'SER AI',
+        'description' => 'A Face Recognition and Emotion AI using real-time detection, built with Python and modern AI libraries.',
+        'link' => '#', // Replace with your actual link
+        'image' => 'https://i.imgur.com/example-project-3.png' // <-- ADDED: Replace with your project image URL
     ]
 ];
 
 // Contact information with links
 $contact = [
-    ['icon' => 'fas fa-envelope', 'text' => 'christopherivanderp@gmail.com', 'link' => 'mailto:christopherivanderp@gmail.com'],
-    ['icon' => 'fab fa-linkedin', 'text' => 'LinkedIn', 'link' => 'https://www.linkedin.com/in/christopher-ivander-dicky-prayudhi-36b948293/'],
-    ['icon' => 'fab fa-github', 'text' => 'GitHub', 'link' => 'https://github.com/Kriterr'],
-    ['icon' => 'fas fa-phone', 'text' => '+62 812 8543 6662', 'link' => 'tel:+6281285436662']
+    [
+        'icon' => 'fas fa-envelope',
+        'text' => 'christopherivanderp@gmail.com',
+        'link' => 'mailto:christopherivanderp@gmail.com'
+    ],
+    [
+        'icon' => 'fab fa-linkedin',
+        'text' => 'LinkedIn',
+        'link' => 'https://www.linkedin.com/in/christopher-ivander-dicky-prayudhi-36b948293/'
+    ],
+    [
+        'icon' => 'fab fa-github',
+        'text' => 'GitHub',
+        'link' => 'https://github.com/Kriterr'
+    ],
+    [
+        'icon' => 'fas fa-phone',
+        'text' => '+62 812 8543 6662',
+        'link' => 'tel:+6281285436662'
+    ]
 ];
 
-// List of certificates with preview images
+// List of certificates with images
 $certificates = [
     [
         'title' => 'English Certificate – EF SET',
         'issuer' => 'English First',
         'date' => 'Issued Sep 2025',
         'link' => 'https://drive.google.com/file/d/1Ck-KgXR5Rw58zgCmf8fQP97sr2qUz5DJ/view?usp=sharing',
-        'image' => 'https://placehold.co/600x400/1a1a1a/FFFFFF?text=EF+SET'
+        'image' => 'https://i.imgur.com/example-cert-1.png' // <-- ADDED: Replace with your certificate image URL
     ],
     [
-        'title' => 'Beelingua Language Proficiency',
+        'title' => 'Beelingua Language Certificate',
         'issuer' => 'Binus University',
         'date' => 'Issued Nov 2023',
         'link' => 'https://drive.google.com/drive/folders/1QRAaWl_F3XoomvrXhF-CHwOxSHpn7MgF?usp=sharing',
-        'image' => 'https://placehold.co/600x400/1a1a1a/FFFFFF?text=Beelingua'
+        'image' => 'https://i.imgur.com/example-cert-2.png' // <-- ADDED: Replace with your certificate image URL
     ],
     [
         'title' => 'Certified ScrumMaster (CSM)',
         'issuer' => 'Scrum Alliance',
         'date' => 'Issued January 2024',
         'link' => 'https://www.scrumalliance.org/credential/link',
-        'image' => 'https://placehold.co/600x400/1a1a1a/FFFFFF?text=CSM'
+        'image' => 'https://i.imgur.com/example-cert-3.png' // <-- ADDED: Replace with your certificate image URL
     ]
 ];
 

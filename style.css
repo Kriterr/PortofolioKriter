@@ -1,11 +1,11 @@
-/* ===== PENGATURAN GLOBAL & VARIABEL ===== */
+/* ===== GLOBAL SETTINGS & VARIABLES ===== */
 :root {
     --primary-color: #007aff;
     --text-color: #e0e6ed;
     --outline-color: rgba(255, 255, 255, 0.2);
     --background-color-dark: #111111;
-    --card-hover-shadow: 0 8px 30px rgba(0, 122, 255, 0.2); 
-    --profile-glow: 0 0 25px rgba(0, 122, 255, 0.4); 
+    --card-hover-shadow: 0 8px 30px rgba(0, 122, 255, 0.2);
+    --profile-glow: 0 0 25px rgba(0, 122, 255, 0.4);
     --nav-height: 70px;
 }
 
@@ -21,18 +21,13 @@ html {
 }
 
 body {
-     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-     Helvetica, Arial, sans-serif, "Apple Color Emoji", 
-     "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color-dark);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
-    padding-top: var(--nav-height); /* Hanya sisakan padding-top untuk navbar */
+    padding-top: var(--nav-height);
     overflow-x: hidden;
 }
 
@@ -56,19 +51,12 @@ body {
 
 .navbar-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     height: var(--nav-height);
-    width: 90%; 
-    max-width: 900px; 
-    margin: 0 auto; 
-}
-
-.nav-logo {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .nav-menu {
@@ -103,19 +91,12 @@ body {
     border-bottom: 3px solid var(--primary-color);
 }
 
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    cursor: pointer;
-}
-
-/* ===== KONTEN UTAMA ===== */
+/* ===== MAIN CONTENT ===== */
 .main-container {
-    width: 90%; /* Dibuat 90% untuk padding mobile */
-    max-width: 900px; /* DISAMAKAN dengan .navbar-container */
-    margin: 0 auto; /* Otomatis di tengah */
-    padding: 2.5rem 0; /* Memberi jarak atas/bawah dari body */
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 0;
 }
 
 .section {
@@ -138,7 +119,6 @@ body {
     box-shadow: var(--card-hover-shadow);
 }
 
-/* Headings */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -148,7 +128,7 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    color: var(--text-color); /* <-- Ganti ke warna teks normal */
+    color: var(--text-color);
     border-bottom: 2px solid var(--outline-color);
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
@@ -160,20 +140,7 @@ h2 {
     color: #999;
 }
 
-/* Link */
-.project-link, .certificate-link {
-    display: inline-block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.project-link:hover, .certificate-link:hover {
-    color: #fff;
-}
-
-/* Profile Section */
+/* ===== PROFILE & CV BUTTON ===== */
 .profile-header-content {
     text-align: center;
     background-color: transparent;
@@ -191,7 +158,32 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Contact List */
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cv-download-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CONTACT ===== */
 .contact-list-vertical {
     display: block;
 }
@@ -221,29 +213,45 @@ h2 {
     color: var(--primary-color);
 }
 
-/* Skills List */
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 0.75rem;
+/* ===== SKILLS SECTION (NEW) ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
 }
 
-.skills-list li {
+.skill-card {
     background-color: transparent;
     border: 1px solid var(--outline-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.skill-card span {
     font-weight: 500;
-    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 
-.skills-list li:hover {
-    background-color: rgba(0, 191, 255, 0.2);
-}
 
-/* Projects and Certificates Grid */
+/* ===== PROJECTS & CERTIFICATES ===== */
 .projects-grid, .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -252,16 +260,39 @@ h2 {
 
 .project-card, .certificate-item {
     background-color: transparent;
-    padding: 1.5rem;
     border-radius: 16px;
     border: 1px solid var(--outline-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Important for containing the image */
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover, .certificate-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--card-hover-shadow);
+}
+
+/* NEW: Style for the card image */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* NEW: Wrapper for text content */
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content p {
+    flex-grow: 1; /* Pushes the link to the bottom */
+    margin-bottom: 1rem;
 }
 
 .project-card h3, .certificate-item h3 {
@@ -279,7 +310,21 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Footer */
+.project-link, .certificate-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    margin-top: auto; /* Aligns link to the bottom */
+}
+
+.project-link:hover, .certificate-link:hover {
+    color: #fff;
+}
+
+
+/* ===== FOOTER ===== */
 .footer {
     text-align: center;
     padding: 1.5rem 0;
@@ -287,66 +332,10 @@ h2 {
     color: #888;
 }
 
-/* ===== PENGATURAN RESPONSIVE (MOBILE) ===== */
-
+/* ===== RESPONSIVE SETTINGS ===== */
 @media screen and (max-width: 960px) {
     .navbar-container {
-        width: 90%; /* Memastikan padding di mobile */
-    }
-
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - var(--nav-height));
-        position: absolute;
-        top: var(--nav-height);
-        left: -100%; /* Sembunyi di luar layar */
-        opacity: 1;
-        transition: all 0.5s ease;
-        background: #0a111a; /* Background solid saat menu mobile terbuka */
-        gap: 0;
-    }
-
-    .nav-menu.active {
-        left: 0; /* Pindahkan ke layar */
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
-
-    .nav-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .nav-link {
-        text-align: center;
-        padding: 2rem 0;
-        width: 100%;
-        display: table;
-        border-bottom: 1px solid var(--outline-color);
-    }
-    
-    .nav-link:hover {
-        border-bottom: 1px solid var(--outline-color);
-        color: var(--primary-color);
-    }
-    
-    .nav-link.active {
-        border-bottom: 1px solid var(--primary-color);
-    }
-
-    .menu-icon {
-        display: block; /* Tampilkan ikon hamburger */
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-    }
-    
-    .menu-icon.is-active .fa-bars {
-        /* (Opsional) Animasi ganti ikon, untuk sekarang kita biarkan */
+        width: 90%;
     }
 }
 
@@ -355,34 +344,15 @@ h2 {
     h2 { font-size: 1.5rem; }
 
     .section {
-        padding: 1.5rem; /* Kurangi padding section di mobile */
+        padding: 1.5rem;
     }
-    
-    .projects-grid, .certificates-grid {
-        grid-template-columns: 1fr; /* Buat 1 kolom di mobile */
-    }
-    
-.cv-download-btn {
-    display: inline-flex; /* Menggunakan flexbox untuk alignment icon dan teks */
-    align-items: center;
-    gap: 8px; /* Jarak antara ikon dan teks */
-    margin-top: 24px;
-    padding: 12px 24px;
-    background-color: #007BFF; /* Warna biru profesional */
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    border: none; /* Menghilangkan border */
-    border-radius: 8px; /* Sudut lebih membulat */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi lebih halus */
-}
 
-.cv-download-btn:hover {
-    background-color: #0056b3; /* Warna menjadi sedikit lebih gelap saat disentuh kursor */
-    transform: translateY(-2px); /* Tombol sedikit terangkat */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    .projects-grid, .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
 }
