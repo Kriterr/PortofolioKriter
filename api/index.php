@@ -35,9 +35,9 @@ require_once 'data.php';
                 <img src="<?php echo $profile['profile_pic']; ?>" alt="Profile Picture of <?php echo $profile['name']; ?>" class="profile-pic">
                 <h1><?php echo $profile['name']; ?></h1>
                 <p class="job-title"><?php echo $profile['job_title']; ?></p>
-                <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" download>
-                    <i class="fas fa-download"></i> View CV
-                </a>
+               <a href="<?php echo $profile['cv_link']; ?>" class="cv-download-btn" target="_blank">
+    View CV
+</a>
             </div>
         </section>
 
