@@ -48,6 +48,12 @@ $projects = [
         'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_5cb4ddd007/2025-11-19_694f945b32.png'
     ],
     [
+        'title' => 'Elite Cuts – Premium Barbershop Experience',
+        'description' => 'Artevo is a mobile-based platform that connects users with curated artworks while providing an interactive space for discussion and artistic expression. The system is built with a structured architecture and detailed process modeling to ensure smooth ordering, community interaction, and administrative operations.',
+        'link' => 'https://elites-cuts.lovable.app/', // Replace with your actual link
+        'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_27ff54e6b1/2025-11-19_622aff084f.png'
+    ],
+    [
         'title' => 'Drug Awareness Education Program',
         'description' => 'Drug Awareness Socialization An interactive program designed to educate high school students on the risks of substance abuse through simulations and discussions.',
         'link' => 'https://drive.google.com/drive/folders/1fd9V_X26WKWyHXLtbUAMJmeDz3lHLqUR?usp=sharing', // Replace with your actual link
