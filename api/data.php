@@ -42,11 +42,18 @@ $projects = [
         'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_56d964aa60/2025-10-17_38408f5fa9.png'
     ],
     [
+        'title' => 'Artevo – Art Ordering & Community Interaction System',
+        'description' => 'Artevo is a mobile-based platform that connects users with curated artworks while providing an interactive space for discussion and artistic expression. The system is built with a structured architecture and detailed process modeling to ensure smooth ordering, community interaction, and administrative operations.',
+        'link' => 'https://drive.google.com/file/d/1I1PBJRFI3H7RIzsxhSCoqDJSGWstRfEY/view?usp=sharing', // Replace with your actual link
+        'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_5cb4ddd007/2025-11-19_694f945b32.png'
+    ],
+    [
         'title' => 'Drug Awareness Education Program',
         'description' => 'Drug Awareness Socialization An interactive program designed to educate high school students on the risks of substance abuse through simulations and discussions.',
         'link' => 'https://drive.google.com/drive/folders/1fd9V_X26WKWyHXLtbUAMJmeDz3lHLqUR?usp=sharing', // Replace with your actual link
         'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_494b9b9aa8/2025-10-17_fd331d7b46.jpeg'
     ]
+    
 ];
 
 // Contact information with links
@@ -95,6 +102,13 @@ $certificates = [
         'date' => 'Issued September 2025',
         'link' => 'https://drive.google.com/file/d/1RYk4pfP8u_KD90pVPgXqdq9xLmT6G4Gm/view?usp=sharing',
         'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_22c3c4f08a/2025-10-17_3f42b1030b.jpg' // <-- ADDED: Replace with your certificate image URL
+    ]
+    [
+        'title' => 'Preliminary Stage Participant – Business Case Competition TDC Summit Fest 2025',
+        'issuer' => 'TDC ITS',
+        'date' => 'Issued October 2025',
+        'link' => 'https://drive.google.com/file/d/1ixRPfBTLLOzo5pI0c5rmbR927Akn_c01/view?usp=sharing',
+        'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_1ca3ba5fc8/2025-11-19_b805ad21b3.png' // <-- ADDED: Replace with your certificate image URL
     ]
 ];
 
