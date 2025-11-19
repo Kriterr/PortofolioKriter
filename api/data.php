@@ -102,7 +102,7 @@ $certificates = [
         'date' => 'Issued September 2025',
         'link' => 'https://drive.google.com/file/d/1RYk4pfP8u_KD90pVPgXqdq9xLmT6G4Gm/view?usp=sharing',
         'image' => 'https://cdn.momoi.cc/uploads/2025-10-17_22c3c4f08a/2025-10-17_3f42b1030b.jpg' // <-- ADDED: Replace with your certificate image URL
-    ]
+    ],
     [
         'title' => 'Preliminary Stage Participant – Business Case Competition TDC Summit Fest 2025',
         'issuer' => 'TDC ITS',
