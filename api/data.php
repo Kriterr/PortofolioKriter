@@ -54,6 +54,12 @@ $projects = [
         'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_27ff54e6b1/2025-11-19_622aff084f.png'
     ],
     [
+        'title' => 'KingsHcut Barbershop Reservation System',
+        'description' => 'KingsHcut is a full-featured reservation system for a barber/salon, providing validated user registration, detailed service booking with date/time selection, and a dedicated admin dashboard for managing services and reservations.',
+        'link' => 'https://drive.google.com/drive/folders/1cXdtAPpDejxSCT4YOYS2g9yCTd5JaG0Y?usp=drive_link', // Replace with your actual link
+        'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_61806913cf/2025-11-19_a7509bea24.png'
+    ],
+    [
         'title' => 'Drug Awareness Education Program',
         'description' => 'Drug Awareness Socialization An interactive program designed to educate high school students on the risks of substance abuse through simulations and discussions.',
         'link' => 'https://drive.google.com/drive/folders/1fd9V_X26WKWyHXLtbUAMJmeDz3lHLqUR?usp=sharing', // Replace with your actual link
