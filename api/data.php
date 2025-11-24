@@ -49,7 +49,7 @@ $projects = [
     ],
     [
         'title' => 'Elite Cuts – Premium Barbershop Experience',
-        'description' => 'Artevo is a mobile-based platform that connects users with curated artworks while providing an interactive space for discussion and artistic expression. The system is built with a structured architecture and detailed process modeling to ensure smooth ordering, community interaction, and administrative operations.',
+        'description' => 'Elite Cuts adalah sebuah platform web modern yang dirancang untuk menghadirkan pengalaman digital bagi barbershop premium, menampilkan layanan cukur profesional dengan antarmuka yang elegan dan user-friendly. Proyek ini berfokus pada penciptaan identitas visual yang kuat untuk meningkatkan daya tarik bisnis dan kemudahan akses bagi pelanggan.',
         'link' => 'https://elites-cuts.lovable.app/', // Replace with your actual link
         'image' => 'https://cdn.momoi.cc/uploads/2025-11-19_27ff54e6b1/2025-11-19_622aff084f.png'
     ],
